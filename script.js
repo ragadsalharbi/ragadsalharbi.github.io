@@ -642,3 +642,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     applyLanguage(currentLanguage);
 });
+
+// Premium cursor glow
+const glow=document.querySelector('.cursor-glow');
+window.addEventListener('mousemove',e=>{if(glow){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';}});
+
+// Extra reveal animation
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));

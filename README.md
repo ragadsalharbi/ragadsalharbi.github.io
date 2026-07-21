@@ -31,3 +31,5 @@ portfolio/
     │   └── Raghad_Alharbi_CV.pdf
     └── images/
         └── masterworks-dashboard.png
+
+V3 Premium: opportunity banner, certification section, enhanced AI portfolio styling.
