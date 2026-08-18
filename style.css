@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap');
 
 :root {
-    --bg: #0b1120;
-    --bg-deep: #070b14;
-    --card: rgba(17, 24, 39, 0.72);
-    --card-strong: rgba(20, 29, 48, 0.92);
-    --glass: rgba(255, 255, 255, 0.055);
+    --bg: #020617;
+    --bg-deep: #000000;
+    --card: rgba(2, 6, 23, 0.82);
+    --card-strong: rgba(15, 23, 42, 0.96);
+    --glass: rgba(255, 255, 255, 0.035);
     --glass-hover: rgba(255, 255, 255, 0.085);
     --line: rgba(255, 255, 255, 0.105);
     --line-strong: rgba(139, 92, 246, 0.42);
-    --purple: #8b5cf6;
+    --purple: #a855f7;
     --purple-deep: #7c3aed;
-    --cyan: #38bdf8;
+    --cyan: #22d3ee;
     --cyan-soft: rgba(56, 189, 248, 0.16);
     --text: #ffffff;
     --text-soft: #cbd5e1;
     --text-muted: #94a3b8;
-    --shadow: 0 24px 70px rgba(0, 0, 0, 0.27);
+    --shadow: 0 30px 90px rgba(0, 0, 0, 0.65);
     --radius-xl: 30px;
     --radius-lg: 22px;
     --radius-md: 16px;
@@ -1614,3 +1614,6 @@ html[dir="rtl"] .modal-close {
 }
 .cert-card small{color:#94a3b8}
 @media(max-width:700px){.cert-grid{grid-template-columns:1fr}}
+
+/* Professional cyber dark upgrade */
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 20% 10%,rgba(168,85,247,.12),transparent 35%),radial-gradient(circle at 80% 20%,rgba(34,211,238,.10),transparent 35%);pointer-events:none;z-index:-1;}
