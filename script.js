@@ -1,654 +1,395 @@
-/* ==================================================
-   RΛD Portfolio - Version 5.0
-================================================== */
+/* ============================================================
+   Raghad Alharbi — Portfolio
+   Everything is declared before boot() runs at the bottom.
+   Optional browser APIs are feature-detected, never assumed.
+   ============================================================ */
 
-"use strict";
+const ME = {
+  firstName: 'Raghad',
+  lastName:  'Alharbi',
+  fullName:  'Raghad Sultan Alharbi',
+  title:     'Data Analyst & Data Engineer',
+  phone:     '+966557820184',
+  email:     'ragadsalharbi@gmail.com',
+  website:   'https://ragadsalharbi.github.io',
+  github:    'https://github.com/ragadsalharbi',
+  linkedin:  'https://www.linkedin.com/in/raghad-alharbi-38a61b326/',
+  city:      'Riyadh',
+  country:   'Saudi Arabia'
+};
 
-document.documentElement.classList.add("js-enabled");
+const root = document.documentElement;
+const $  = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.prototype.slice.call(r.querySelectorAll(s));
+const wait = ms => new Promise(r => setTimeout(r, ms));
 
-document.addEventListener("DOMContentLoaded", () => {
-    const typingElement = document.getElementById("typing");
-    const languageButton = document.getElementById("langToggle");
-    const menuButton = document.getElementById("menuToggle");
-    const navigation = document.getElementById("navLinks");
-    const header = document.getElementById("siteHeader");
-    const backToTopButton = document.getElementById("backToTop");
-    const dashboardCard = document.getElementById("dashboardCard");
-    const dashboardImage = document.getElementById("dashboardImage");
-    const imageModal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
-    const modalCloseButton = document.getElementById("modalClose");
+const calm = typeof window.matchMedia === 'function'
+  ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  : false;
 
-    const typingWords = {
-        en: [
-            "Data Engineer",
-            "Data Governance Professional",
-            "AI & Machine Learning Enthusiast",
-            "Software Developer"
-        ],
-        ar: [
-            "مهندسة بيانات",
-            "متخصصة في حوكمة البيانات",
-            "مهتمة بالذكاء الاصطناعي وتعلم الآلة",
-            "مطورة برمجيات"
-        ]
-    };
+let lang = 'en';
 
-    let currentLanguage = getSavedLanguage();
-    let typingTimeout = null;
-    let wordIndex = 0;
-    let characterIndex = 0;
-    let deleting = false;
-
-    function getSavedLanguage() {
-        try {
-            const saved = localStorage.getItem("portfolioLanguage");
-
-            return saved === "ar" || saved === "en"
-                ? saved
-                : "en";
-        } catch (error) {
-            return "en";
-        }
+/* ============ QUERIES ============ */
+const QUERIES = [
+  {
+    sql: {
+      en: "SELECT field, value\n  FROM raghad\n WHERE public = true;",
+      ar: "SELECT field, value\n  FROM raghad\n WHERE public = true;"
+    },
+    head: { en: ['field', 'value'], ar: ['الحقل', 'القيمة'] },
+    rows: {
+      en: [
+        ['role',        'Data Analyst & Data Engineer'],
+        ['based_in',    'Riyadh, Saudi Arabia'],
+        ['degree',      'BSc Computer Science — Umm Al-Qura'],
+        ['experience',  '5-month enterprise data governance co-op'],
+        ['core_stack',  'SQL, Python, Power BI, Informatica CDGC'],
+        ['status',      'open to opportunities']
+      ],
+      ar: [
+        ['الدور',       'محلّلة بيانات ومهندسة بيانات'],
+        ['المقر',       'الرياض، السعودية'],
+        ['الشهادة',     'بكالوريوس علوم حاسب — أم القرى'],
+        ['الخبرة',      'تدريب تعاوني ٥ أشهر في حوكمة بيانات مؤسسية'],
+        ['الأدوات',     'SQL، Python، Power BI، Informatica CDGC'],
+        ['الحالة',      'متاحة للفرص']
+      ]
     }
-
-    function saveLanguage(language) {
-        try {
-            localStorage.setItem(
-                "portfolioLanguage",
-                language
-            );
-        } catch (error) {
-            // الموقع سيستمر بالعمل حتى لو كان localStorage غير متاح.
-        }
+  },
+  {
+    sql: {
+      en: "SELECT name, domain, year\n  FROM projects\n ORDER BY year DESC\n LIMIT 7;",
+      ar: "SELECT name, domain, year\n  FROM projects\n ORDER BY year DESC\n LIMIT 7;"
+    },
+    head: { en: ['name', 'domain', 'year'], ar: ['المشروع', 'المجال', 'السنة'] },
+    rows: {
+      en: [
+        ['ubar',                'realtime / firebase', '2026'],
+        ['sentiment-classification', 'nlp / transformers', '2026'],
+        ['aljamoum-campus-network',  'networking',        '2025'],
+        ['spam-detection',      'nlp / classification', '2025'],
+        ['video-game-sales',    'regression / bi',      '2025'],
+        ['smartsaver',          'backend / mysql',      '2025'],
+        ['hospital-database',   'data modelling',       '2023']
+      ],
+      ar: [
+        ['ubar',                'زمن حقيقي / Firebase', '2026'],
+        ['sentiment-classification', 'معالجة لغة',      '2026'],
+        ['aljamoum-campus-network',  'شبكات',           '2025'],
+        ['spam-detection',      'تصنيف نصوص',           '2025'],
+        ['video-game-sales',    'انحدار / تقارير',      '2025'],
+        ['smartsaver',          'واجهة خلفية / MySQL',  '2025'],
+        ['hospital-database',   'نمذجة بيانات',         '2023']
+      ]
+    },
+    numCol: 2
+  },
+  {
+    sql: {
+      en: "SELECT area, count(tool) AS tools\n  FROM skills\n GROUP BY area\n ORDER BY tools DESC;",
+      ar: "SELECT area, count(tool) AS tools\n  FROM skills\n GROUP BY area\n ORDER BY tools DESC;"
+    },
+    head: { en: ['area', 'tools'], ar: ['المجال', 'الأدوات'] },
+    rows: {
+      en: [
+        ['data governance',        '6'],
+        ['data engineering',       '6'],
+        ['analysis & bi',          '7'],
+        ['programming & tools',    '7'],
+        ['coursework exposure',    '5']
+      ],
+      ar: [
+        ['حوكمة البيانات',   '٦'],
+        ['هندسة البيانات',   '٦'],
+        ['التحليل والتقارير', '٧'],
+        ['البرمجة والأدوات',  '٧'],
+        ['مواد دراسية',      '٥']
+      ]
+    },
+    numCol: 1
+  },
+  {
+    sql: {
+      en: "SELECT channel, handle\n  FROM contact\n WHERE reachable = true;",
+      ar: "SELECT channel, handle\n  FROM contact\n WHERE reachable = true;"
+    },
+    head: { en: ['channel', 'handle'], ar: ['القناة', 'المعرّف'] },
+    rows: {
+      en: [
+        ['email',    'ragadsalharbi@gmail.com'],
+        ['github',   'github.com/ragadsalharbi'],
+        ['linkedin', 'in/raghad-alharbi-38a61b326'],
+        ['whatsapp', '+966 55 782 0184'],
+        ['location', 'Riyadh, Saudi Arabia']
+      ],
+      ar: [
+        ['البريد',    'ragadsalharbi@gmail.com'],
+        ['قتهب',      'github.com/ragadsalharbi'],
+        ['لينكدإن',   'in/raghad-alharbi-38a61b326'],
+        ['واتساب',    '+966 55 782 0184'],
+        ['الموقع',    'الرياض، السعودية']
+      ]
     }
+  }
+];
 
-    function applyLanguage(language) {
-        currentLanguage = language;
-        saveLanguage(language);
+const KW = /\b(SELECT|FROM|WHERE|GROUP BY|ORDER BY|LIMIT|AS|DESC|true)\b/g;
 
-        document.documentElement.lang = language;
+function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 
-        document.documentElement.dir =
-            language === "ar"
-                ? "rtl"
-                : "ltr";
+function highlight(sql) {
+  return esc(sql)
+    .replace(KW, '<span class="kw">$1</span>')
+    .replace(/\bcount\b/g, '<span class="fn">count</span>');
+}
 
-        document
-            .querySelectorAll("[data-en][data-ar]")
-            .forEach((element) => {
-                const translatedText =
-                    element.dataset[language];
+/* ============ ELEMENTS ============ */
+const mark      = $('#mark');
+const sqlEl     = $('#sql');
+const caretEl   = $('#caret');
+const resultEl  = $('#result');
+const theadEl   = $('#thead');
+const tbodyEl   = $('#tbody');
+const metaEl    = $('#meta');
+const rerunBtn  = $('#rerun');
+const tabBtns   = $$('.tab');
 
-                if (
-                    typeof translatedText === "string"
-                ) {
-                    element.textContent =
-                        translatedText;
-                }
-            });
+const themeBtn  = $('#themeBtn');
+const themeLbl  = $('#themeLabel');
+const langBtns  = $$('.lang-btn');
+const sidebar   = $('#sidebar');
+const menuBtn   = $('#menuBtn');
+const scrim     = $('#scrim');
+const navLinks  = $$('.nav-link');
+const filters   = $$('.filter');
+const cards     = $$('.card');
+const toast     = $('#toast');
+const saveBtn   = $('#saveContact');
+const yearEl    = $('#year');
 
-        if (languageButton) {
-            languageButton.textContent =
-                language === "en"
-                    ? "AR"
-                    : "EN";
+/* ============ CONSOLE ============ */
+let active = 0;
+let runId  = 0;
 
-            languageButton.setAttribute(
-                "aria-label",
-                language === "en"
-                    ? "Switch to Arabic"
-                    : "التبديل إلى الإنجليزية"
-            );
-        }
+async function runQuery() {
+  const id = ++runId;
+  const q  = QUERIES[active];
+  const sql  = q.sql[lang]  || q.sql.en;
+  const head = q.head[lang] || q.head.en;
+  const rows = q.rows[lang] || q.rows.en;
 
-        resetTypingEffect();
+  resultEl.hidden = true;
+  metaEl.classList.remove('is-in');
+  theadEl.innerHTML = '';
+  tbodyEl.innerHTML = '';
+  sqlEl.textContent = '';
+  caretEl.hidden = false;
+
+  /* type the statement */
+  if (calm) {
+    sqlEl.innerHTML = highlight(sql);
+  } else {
+    for (let i = 1; i <= sql.length; i++) {
+      if (id !== runId) return;
+      sqlEl.textContent = sql.slice(0, i);
+      await wait(sql[i - 1] === '\n' ? 90 : 26);
     }
+    sqlEl.innerHTML = highlight(sql);
+    await wait(260);
+  }
+  if (id !== runId) return;
+  caretEl.hidden = true;
 
-    function resetTypingEffect() {
-        if (typingTimeout) {
-            clearTimeout(typingTimeout);
-        }
+  /* header */
+  const hr = document.createElement('tr');
+  head.forEach(h => {
+    const th = document.createElement('th');
+    th.textContent = h;
+    hr.appendChild(th);
+  });
+  theadEl.appendChild(hr);
 
-        wordIndex = 0;
-        characterIndex = 0;
-        deleting = false;
-
-        if (typingElement) {
-            typingElement.textContent = "";
-            runTypingEffect();
-        }
-    }
-
-    function runTypingEffect() {
-        if (!typingElement) {
-            return;
-        }
-
-        const words =
-            typingWords[currentLanguage] ||
-            typingWords.en;
-
-        const currentWord =
-            words[wordIndex];
-
-        if (!deleting) {
-            characterIndex += 1;
-
-            typingElement.textContent =
-                currentWord.slice(
-                    0,
-                    characterIndex
-                );
-
-            if (
-                characterIndex >=
-                currentWord.length
-            ) {
-                deleting = true;
-
-                typingTimeout = setTimeout(
-                    runTypingEffect,
-                    1250
-                );
-
-                return;
-            }
-        } else {
-            characterIndex -= 1;
-
-            typingElement.textContent =
-                currentWord.slice(
-                    0,
-                    Math.max(
-                        0,
-                        characterIndex
-                    )
-                );
-
-            if (characterIndex <= 0) {
-                deleting = false;
-
-                wordIndex =
-                    (wordIndex + 1) %
-                    words.length;
-            }
-        }
-
-        typingTimeout = setTimeout(
-            runTypingEffect,
-            deleting ? 38 : 76
-        );
-    }
-
-    if (languageButton) {
-        languageButton.addEventListener(
-            "click",
-            () => {
-                applyLanguage(
-                    currentLanguage === "en"
-                        ? "ar"
-                        : "en"
-                );
-            }
-        );
-    }
-
-    function setMenuState(isOpen) {
-        if (!menuButton || !navigation) {
-            return;
-        }
-
-        menuButton.classList.toggle(
-            "open",
-            isOpen
-        );
-
-        navigation.classList.toggle(
-            "open",
-            isOpen
-        );
-
-        menuButton.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
-    }
-
-    if (menuButton && navigation) {
-        menuButton.addEventListener(
-            "click",
-            () => {
-                setMenuState(
-                    !navigation.classList.contains(
-                        "open"
-                    )
-                );
-            }
-        );
-
-        navigation
-            .querySelectorAll("a")
-            .forEach((link) => {
-                link.addEventListener(
-                    "click",
-                    () => {
-                        setMenuState(false);
-                    }
-                );
-            });
-
-        document.addEventListener(
-            "click",
-            (event) => {
-                if (
-                    !navigation.classList.contains(
-                        "open"
-                    )
-                ) {
-                    return;
-                }
-
-                if (
-                    !event.target.closest(
-                        ".navbar"
-                    )
-                ) {
-                    setMenuState(false);
-                }
-            }
-        );
-    }
-
-    const navigationLinks =
-        document.querySelectorAll(
-            '.nav-links a[href^="#"]'
-        );
-
-    const sections =
-        document.querySelectorAll(
-            "main section[id]"
-        );
-
-    navigationLinks.forEach((link) => {
-        link.addEventListener(
-            "click",
-            (event) => {
-                const targetSelector =
-                    link.getAttribute("href");
-
-                const target =
-                    targetSelector
-                        ? document.querySelector(
-                            targetSelector
-                        )
-                        : null;
-
-                if (!target) {
-                    return;
-                }
-
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            }
-        );
+  /* body */
+  rows.forEach(cells => {
+    const tr = document.createElement('tr');
+    cells.forEach((c, i) => {
+      const td = document.createElement('td');
+      td.textContent = c;
+      if (q.numCol === i) td.className = 'num';
+      tr.appendChild(td);
     });
+    tbodyEl.appendChild(tr);
+  });
 
-    function updatePageOnScroll() {
-        const scrollPosition =
-            window.scrollY;
+  resultEl.hidden = false;
 
-        let activeSection = "home";
+  const trs = $$('tr', tbodyEl);
+  for (const tr of trs) {
+    if (id !== runId) return;
+    tr.classList.add('is-in');
+    await wait(calm ? 0 : 70);
+  }
 
-        sections.forEach((section) => {
-            if (
-                scrollPosition >=
-                section.offsetTop - 180
-            ) {
-                activeSection =
-                    section.id;
-            }
-        });
+  if (id !== runId) return;
+  const ms = 2 + Math.round(rows.length * 0.7);
+  metaEl.textContent = lang === 'ar'
+    ? `(${rows.length} صفوف) · ${ms} مللي ثانية`
+    : `(${rows.length} rows) · ${ms} ms`;
+  metaEl.classList.add('is-in');
+}
 
-        navigationLinks.forEach((link) => {
-            link.classList.toggle(
-                "active",
-                link.getAttribute("href") ===
-                    `#${activeSection}`
-            );
-        });
+function selectTab(i) {
+  active = i;
+  tabBtns.forEach((b, n) => b.classList.toggle('is-active', n === i));
+  runQuery();
+}
 
-        if (header) {
-            header.classList.toggle(
-                "scrolled",
-                scrollPosition > 20
-            );
-        }
+/* ============ THEME ============ */
+function applyTheme(t) {
+  root.setAttribute('data-theme', t);
+  if (themeLbl) {
+    themeLbl.textContent = t === 'dark'
+      ? (lang === 'ar' ? 'فاتح' : 'Light')
+      : (lang === 'ar' ? 'داكن' : 'Dark');
+  }
+  try { localStorage.setItem('theme', t); } catch (e) {}
+}
 
-        if (backToTopButton) {
-            backToTopButton.classList.toggle(
-                "visible",
-                scrollPosition > 600
-            );
-        }
-    }
+/* ============ LANGUAGE ============ */
+function applyLang(next) {
+  lang = next === 'ar' ? 'ar' : 'en';
+  const ar = lang === 'ar';
 
-    window.addEventListener(
-        "scroll",
-        updatePageOnScroll,
-        {
-            passive: true
-        }
-    );
+  root.setAttribute('lang', ar ? 'ar' : 'en');
+  root.setAttribute('dir',  ar ? 'rtl' : 'ltr');
 
-    updatePageOnScroll();
+  $$('[data-en]').forEach(el => {
+    const v = ar ? el.dataset.ar : el.dataset.en;
+    if (v !== undefined) el.innerHTML = v;
+  });
 
-    if (backToTopButton) {
-        backToTopButton.addEventListener(
-            "click",
-            () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-            }
-        );
-    }
+  langBtns.forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
+  document.title = ar
+    ? 'رغد الحربي — محلّلة بيانات ومهندسة بيانات'
+    : 'Raghad Alharbi — Data Analyst & Data Engineer';
 
-    function initializeRevealAnimation() {
-        const revealElements =
-            document.querySelectorAll(
-                ".reveal"
-            );
+  applyTheme(root.getAttribute('data-theme') || 'dark');
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+  runQuery();
+}
 
-        if (
-            !(
-                "IntersectionObserver" in
-                window
-            )
-        ) {
-            revealElements.forEach(
-                (element) => {
-                    element.classList.add(
-                        "show"
-                    );
-                }
-            );
+/* ============ MENU ============ */
+function setMenu(open) {
+  sidebar.classList.toggle('is-open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+  scrim.hidden = !open;
+  document.body.style.overflow = open ? 'hidden' : '';
+}
 
-            return;
-        }
+/* ============ TOAST ============ */
+let toastTimer;
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('is-visible');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2600);
+}
 
-        const observer =
-            new IntersectionObserver(
-                (
-                    entries,
-                    revealObserver
-                ) => {
-                    entries.forEach(
-                        (entry) => {
-                            if (
-                                entry.isIntersecting
-                            ) {
-                                entry.target.classList.add(
-                                    "show"
-                                );
+function saveContact() {
+  const card = [
+    'BEGIN:VCARD', 'VERSION:3.0',
+    `N:${ME.lastName};${ME.firstName};;;`,
+    `FN:${ME.fullName}`,
+    `TITLE:${ME.title}`,
+    `TEL;TYPE=CELL:${ME.phone}`,
+    `EMAIL;TYPE=INTERNET:${ME.email}`,
+    `URL:${ME.website}`,
+    `URL;TYPE=GitHub:${ME.github}`,
+    `URL;TYPE=LinkedIn:${ME.linkedin}`,
+    `ADR;TYPE=HOME:;;;${ME.city};;;${ME.country}`,
+    'END:VCARD'
+  ].join('\r\n');
 
-                                revealObserver.unobserve(
-                                    entry.target
-                                );
-                            }
-                        }
-                    );
-                },
-                {
-                    threshold: 0.06,
-                    rootMargin:
-                        "0px 0px -28px 0px"
-                }
-            );
+  const url = URL.createObjectURL(new Blob([card], { type: 'text/vcard;charset=utf-8' }));
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Raghad-Alharbi.vcf';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  showToast(lang === 'ar' ? 'تم حفظ جهة الاتصال' : 'Contact saved');
+}
 
-        revealElements.forEach(
-            (element) => {
-                observer.observe(element);
-            }
-        );
+/* ============ BOOT ============ */
+function boot() {
 
-        document
-            .querySelectorAll(
-                "#home .reveal"
-            )
-            .forEach((element) => {
-                element.classList.add(
-                    "show"
-                );
-            });
-    }
-
-    initializeRevealAnimation();
-
-    const filterButtons =
-        document.querySelectorAll(
-            ".filter-button"
-        );
-
-    const projectCards =
-        document.querySelectorAll(
-            ".project-card[data-category]"
-        );
-
-    filterButtons.forEach((button) => {
-        button.addEventListener(
-            "click",
-            () => {
-                const selectedFilter =
-                    button.dataset.filter ||
-                    "all";
-
-                filterButtons.forEach(
-                    (item) => {
-                        item.classList.remove(
-                            "active"
-                        );
-                    }
-                );
-
-                button.classList.add(
-                    "active"
-                );
-
-                projectCards.forEach(
-                    (card) => {
-                        const categories =
-                            (
-                                card.dataset
-                                    .category ||
-                                ""
-                            ).split(" ");
-
-                        const shouldShow =
-                            selectedFilter ===
-                                "all" ||
-                            categories.includes(
-                                selectedFilter
-                            );
-
-                        card.classList.toggle(
-                            "is-hidden",
-                            !shouldShow
-                        );
-                    }
-                );
-            }
-        );
+  /* monogram: measure real path lengths, then release the animation */
+  if (mark && typeof SVGPathElement !== 'undefined') {
+    $$('path', mark).forEach(p => {
+      if (typeof p.getTotalLength === 'function') {
+        p.style.setProperty('--len', Math.ceil(p.getTotalLength()));
+      }
     });
+    mark.classList.add('ready');
+  }
 
-    function dashboardAvailable() {
-        return Boolean(
-            dashboardImage &&
-                dashboardImage.dataset
-                    .failed !== "true" &&
-                dashboardImage.naturalWidth >
-                    0
-        );
-    }
+  /* theme */
+  let savedTheme = null, savedLang = null;
+  try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+  try { savedLang  = localStorage.getItem('lang');  } catch (e) {}
 
-    function openImageModal() {
-        if (
-            !imageModal ||
-            !dashboardAvailable()
-        ) {
-            return;
-        }
+  const prefersLight = typeof window.matchMedia === 'function'
+    && window.matchMedia('(prefers-color-scheme: light)').matches;
+  applyTheme(savedTheme || (prefersLight ? 'light' : 'dark'));
 
-        imageModal.classList.add("open");
+  themeBtn.addEventListener('click', () =>
+    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
 
-        imageModal.setAttribute(
-            "aria-hidden",
-            "false"
-        );
+  /* console */
+  tabBtns.forEach((b, i) => b.addEventListener('click', () => selectTab(i)));
+  rerunBtn.addEventListener('click', runQuery);
 
-        document.body.classList.add(
-            "modal-open"
-        );
+  /* language buttons */
+  langBtns.forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
 
-        modalCloseButton?.focus();
-    }
+  /* menu */
+  menuBtn.addEventListener('click', () => setMenu(!sidebar.classList.contains('is-open')));
+  scrim.addEventListener('click', () => setMenu(false));
+  navLinks.forEach(l => l.addEventListener('click', () => {
+    if (window.innerWidth <= 900) setMenu(false);
+  }));
 
-    function closeImageModal() {
-        if (!imageModal) {
-            return;
-        }
+  /* active nav on scroll — only if the browser supports it */
+  if (typeof IntersectionObserver === 'function') {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        navLinks.forEach(l =>
+          l.classList.toggle('is-active', l.getAttribute('href') === '#' + e.target.id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    navLinks.map(a => $(a.getAttribute('href'))).filter(Boolean).forEach(s => io.observe(s));
+  }
 
-        imageModal.classList.remove(
-            "open"
-        );
+  /* project filters */
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    const cat = btn.dataset.filter;
+    filters.forEach(f => f.classList.toggle('is-active', f === btn));
+    cards.forEach(c => c.classList.toggle('hide', cat !== 'all' && c.dataset.cat !== cat));
+  }));
 
-        imageModal.setAttribute(
-            "aria-hidden",
-            "true"
-        );
+  /* contact */
+  saveBtn.addEventListener('click', saveContact);
 
-        document.body.classList.remove(
-            "modal-open"
-        );
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && sidebar.classList.contains('is-open')) setMenu(false);
+  });
 
-        dashboardCard?.focus();
-    }
+  yearEl.textContent = new Date().getFullYear();
 
-    if (dashboardCard) {
-        dashboardCard.addEventListener(
-            "click",
-            openImageModal
-        );
+  /* language last — it kicks off the first query */
+  applyLang(savedLang === 'ar' ? 'ar' : 'en');
+}
 
-        dashboardCard.addEventListener(
-            "keydown",
-            (event) => {
-                if (
-                    event.key === "Enter" ||
-                    event.key === " "
-                ) {
-                    event.preventDefault();
-                    openImageModal();
-                }
-            }
-        );
-    }
-
-    modalCloseButton?.addEventListener(
-        "click",
-        closeImageModal
-    );
-
-    imageModal?.addEventListener(
-        "click",
-        (event) => {
-            if (
-                event.target === imageModal
-            ) {
-                closeImageModal();
-            }
-        }
-    );
-
-    document.addEventListener(
-        "keydown",
-        (event) => {
-            if (
-                event.key === "Escape" &&
-                imageModal?.classList.contains(
-                    "open"
-                )
-            ) {
-                closeImageModal();
-            }
-        }
-    );
-
-    function hideMissingDashboard() {
-        if (dashboardImage) {
-            dashboardImage.dataset.failed =
-                "true";
-        }
-
-        dashboardCard?.remove();
-        imageModal?.remove();
-    }
-
-    if (dashboardImage) {
-        dashboardImage.addEventListener(
-            "error",
-            hideMissingDashboard,
-            {
-                once: true
-            }
-        );
-
-        dashboardImage.addEventListener(
-            "load",
-            () => {
-                if (modalImage) {
-                    modalImage.src =
-                        dashboardImage.currentSrc ||
-                        dashboardImage.src;
-                }
-            },
-            {
-                once: true
-            }
-        );
-
-        if (
-            dashboardImage.complete &&
-            dashboardImage.naturalWidth ===
-                0
-        ) {
-            hideMissingDashboard();
-        }
-    }
-
-    window.addEventListener(
-        "resize",
-        () => {
-            if (window.innerWidth > 860) {
-                setMenuState(false);
-            }
-        }
-    );
-
-    applyLanguage(currentLanguage);
-});
-
-// Premium cursor glow
-const glow=document.querySelector('.cursor-glow');
-window.addEventListener('mousemove',e=>{if(glow){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';}});
-
-// Extra reveal animation
-const observer=new IntersectionObserver(entries=>{
- entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+boot();

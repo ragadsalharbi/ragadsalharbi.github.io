@@ -1,483 +1,299 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Raghad Alharbi portfolio in Cyber Security, GRC, Data Governance, Artificial Intelligence, and Software Development.">
-    <meta name="theme-color" content="#0B1120">
-    <title>Raghad Alharbi | Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raghad Alharbi — Data Analyst &amp; Data Engineer</title>
+<meta name="description" content="Raghad Alharbi — data analyst and data engineer in Riyadh. SQL, Python, Power BI. Computer Science graduate, Umm Al-Qura University.">
+<meta property="og:title" content="Raghad Alharbi — Data Analyst &amp; Data Engineer">
+<meta property="og:description" content="Data modelling, pipelines and analysis. Riyadh, Saudi Arabia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ragadsalharbi.github.io">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cursor-glow"></div>
-    <div class="particles"></div>
-    <div class="grid" aria-hidden="true"></div>
-    <div class="blur blur-one" aria-hidden="true"></div>
-    <div class="blur blur-two" aria-hidden="true"></div>
 
-    <header class="site-header" id="siteHeader">
-        <nav class="navbar" aria-label="Primary navigation">
-            <a class="brand" href="#home" aria-label="R A D Portfolio home">
-                <span class="brand-mark">RΛD</span>
-                <span class="brand-subtitle" data-en="Cyber • GRC • Data" data-ar="البيانات • الذكاء الاصطناعي • الحوكمة">Cyber • GRC • Data</span>
-            </a>
+<a class="skip" href="#main" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
 
-            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="sidebar">
+  <span></span><span></span><span></span>
+</button>
+<div class="scrim" id="scrim" hidden></div>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                <li><a href="#about" data-en="About" data-ar="نبذة">About</a></li>
-                <li><a href="#experience" data-en="Experience" data-ar="الخبرة">Experience</a></li>
-                <li><a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a></li>
-                <li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
-                <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
-            </ul>
+<!-- ==================== SIDEBAR ==================== -->
+<aside class="sidebar" id="sidebar">
 
-            <button class="language-toggle" id="langToggle" type="button" aria-label="Switch to Arabic">AR</button>
-        </nav>
-    </header>
+  <svg class="mark" id="mark" viewBox="0 0 124 74" role="img" aria-label="RAD">
+    <g class="glyphs" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 52 L8 8"/>
+      <path d="M8 8 L26 8 Q36 8 36 19 Q36 30 26 30 L8 30"/>
+      <path d="M22 30 L36 52"/>
+      <path d="M46 52 L61 8 L76 52"/>
+      <path d="M52 36 L70 36"/>
+      <path d="M88 52 L88 8"/>
+      <path d="M88 8 L104 8 Q116 8 116 30 Q116 52 104 52 L88 52"/>
+    </g>
+    <path class="spark" d="M6 66 L22 66 L31 60 L43 70 L55 63 L68 54 L82 66 L97 50 L118 57"
+          fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
 
-    <main>
-        <section class="hero" id="home">
-            <div class="available-banner"><span></span> AVAILABLE FOR OPPORTUNITIES</div>
-<div class="hero-content reveal">
-                <p class="eyebrow" data-en="HELLO, I'M" data-ar="مرحبًا، أنا">HELLO, I'M</p>
-                <h1 data-en="Raghad Alharbi" data-ar="رغد الحربي">Raghad Alharbi</h1>
-                <h2 class="typing-line" id="typing" aria-live="polite"></h2>
+  <h1 class="me-name">Raghad Alharbi</h1>
+  <p class="me-role" data-en="Data Analyst &amp; Data Engineer" data-ar="محلّلة بيانات ومهندسة بيانات">Data Analyst &amp; Data Engineer</p>
 
-                <p class="hero-description" data-en="Computer Science graduate focused on reliable data foundations, governance frameworks, intelligent analytics, and modern software solutions." data-ar="خريجة علوم حاسب أركز على بناء أسس بيانات موثوقة وأطر حوكمة وتحليلات ذكية وحلول برمجية حديثة.">
-                    Computer Science graduate focused on reliable data foundations, governance frameworks, intelligent analytics, and modern software solutions.
-                </p>
+  <nav class="nav" aria-label="Sections">
+    <a class="nav-link is-active" href="#about"><span data-en="Start" data-ar="البداية">Start</span></a>
+    <a class="nav-link" href="#experience"><span data-en="Experience" data-ar="الخبرة">Experience</span></a>
+    <a class="nav-link" href="#projects"><span data-en="Projects" data-ar="المشاريع">Projects</span></a>
+    <a class="nav-link" href="#skills"><span data-en="Skills" data-ar="المهارات">Skills</span></a>
+    <a class="nav-link" href="#education"><span data-en="Education" data-ar="التعليم">Education</span></a>
+    <a class="nav-link" href="#contact"><span data-en="Contact" data-ar="التواصل">Contact</span></a>
+  </nav>
 
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#projects" data-en="Explore Projects" data-ar="استعراض المشاريع">Explore Projects</a>
-                    <a class="button button-secondary" href="https://drive.google.com/file/d/1nHW1d4ZXNmaGtXAYb4l4yYhcRktjCufw/view?usp=sharing" target="_blank" rel="noopener noreferrer" data-en="View CV" data-ar="عرض السيرة الذاتية">View CV</a>
-                </div>
+  <div class="side-foot">
 
-                <div class="hero-focus" aria-label="Career focus areas">
-                    <span data-en="Data Engineering" data-ar="هندسة البيانات">Data Engineering</span>
-                    <span data-en="Data Governance" data-ar="حوكمة البيانات">Data Governance</span>
-                    <span data-en="AI & Machine Learning" data-ar="الذكاء الاصطناعي وتعلم الآلة">AI & Machine Learning</span>
-                    <span data-en="Software Development" data-ar="تطوير البرمجيات">Software Development</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="section-heading reveal">
-                <p class="eyebrow" data-en="GET TO KNOW ME" data-ar="تعرف عليّ">GET TO KNOW ME</p>
-                <h2 data-en="About Me" data-ar="نبذة عني">About Me</h2>
-                <p data-en="I connect data infrastructure, governance, analytics, and software development to create solutions that are reliable, useful, and ready to scale." data-ar="أربط بين البنية التحتية للبيانات والحوكمة والتحليلات وتطوير البرمجيات لبناء حلول موثوقة وعملية وقابلة للتوسع.">
-                    I connect data infrastructure, governance, analytics, and software development to create solutions that are reliable, useful, and ready to scale.
-                </p>
-            </div>
-
-            <div class="about-layout">
-                <article class="about-story glass-card reveal">
-                    <span class="card-kicker" data-en="MY PROFILE" data-ar="ملفي المهني">MY PROFILE</span>
-                    <h3 data-en="Turning trusted data into intelligent decisions." data-ar="تحويل البيانات الموثوقة إلى قرارات ذكية.">Turning trusted data into intelligent decisions.</h3>
-                    <p data-en="My experience covers data engineering, metadata management, business glossaries, data quality, privacy classification, machine learning, NLP, web development, networks, and system analysis. I enjoy turning technical requirements into clear systems, organized workflows, and measurable outputs." data-ar="تشمل خبرتي هندسة البيانات وإدارة البيانات الوصفية وقواميس الأعمال وجودة البيانات وتصنيف الخصوصية وتعلم الآلة ومعالجة اللغة الطبيعية وتطوير الويب والشبكات وتحليل الأنظمة. أستمتع بتحويل المتطلبات التقنية إلى أنظمة واضحة وسير عمل منظم ومخرجات قابلة للقياس.">
-                        My experience covers data engineering, metadata management, business glossaries, data quality, privacy classification, machine learning, NLP, web development, networks, and system analysis. I enjoy turning technical requirements into clear systems, organized workflows, and measurable outputs.
-                    </p>
-                </article>
-
-                <div class="focus-grid">
-                    <article class="focus-card glass-card reveal">
-                        <span class="focus-code">DE</span>
-                        <h3 data-en="Data Engineering" data-ar="هندسة البيانات">Data Engineering</h3>
-                        <p data-en="Pipelines, ETL, cleaning, transformation, storage, and analytics readiness." data-ar="خطوط البيانات وعمليات ETL والتنظيف والتحويل والتخزين وتجهيز البيانات للتحليلات.">Pipelines, ETL, cleaning, transformation, storage, and analytics readiness.</p>
-                    </article>
-                    <article class="focus-card glass-card reveal">
-                        <span class="focus-code">DG</span>
-                        <h3 data-en="Data Governance" data-ar="حوكمة البيانات">Data Governance</h3>
-                        <p data-en="Catalogs, metadata, glossaries, ownership, stewardship, quality, and privacy controls." data-ar="كتالوجات البيانات والبيانات الوصفية وقواميس الأعمال والملكية والإشراف والجودة والخصوصية.">Catalogs, metadata, glossaries, ownership, stewardship, quality, and privacy controls.</p>
-                    </article>
-                    <article class="focus-card glass-card reveal">
-                        <span class="focus-code">AI</span>
-                        <h3 data-en="AI & Machine Learning" data-ar="الذكاء الاصطناعي وتعلم الآلة">AI & Machine Learning</h3>
-                        <p data-en="Data preparation, NLP, model evaluation, feature engineering, and interactive applications." data-ar="إعداد البيانات ومعالجة اللغة الطبيعية وتقييم النماذج وهندسة الخصائص والتطبيقات التفاعلية.">Data preparation, NLP, model evaluation, feature engineering, and interactive applications.</p>
-                    </article>
-                    <article class="focus-card glass-card reveal">
-                        <span class="focus-code">SD</span>
-                        <h3 data-en="Software & Systems" data-ar="البرمجيات والأنظمة">Software & Systems</h3>
-                        <p data-en="Back-end logic, databases, OOP, system modeling, networking, and responsive interfaces." data-ar="منطق الخوادم وقواعد البيانات والبرمجة الكائنية ونمذجة الأنظمة والشبكات والواجهات المتجاوبة.">Back-end logic, databases, OOP, system modeling, networking, and responsive interfaces.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <div class="section-heading reveal">
-                <p class="eyebrow" data-en="PROFESSIONAL JOURNEY" data-ar="الرحلة المهنية">PROFESSIONAL JOURNEY</p>
-                <h2 data-en="Experience & Education" data-ar="الخبرة والتعليم">Experience & Education</h2>
-                <p data-en="Enterprise data governance experience supported by a strong Computer Science foundation." data-ar="خبرة عملية في حوكمة بيانات المؤسسات مدعومة بأساس قوي في علوم الحاسب.">
-                    Enterprise data governance experience supported by a strong Computer Science foundation.
-                </p>
-            </div>
-
-            <article class="experience-card glass-card reveal">
-                <div class="experience-topline">
-                    <div>
-                        <span class="date-pill">Mar - Jul 2025</span>
-                        <h3 data-en="CO-OP IT Intern - Data Governance & Management" data-ar="متدربة تعاونية تقنية - حوكمة وإدارة البيانات">CO-OP IT Intern - Data Governance & Management</h3>
-                        <h4 data-en="Master Works - Riyadh Airports Project" data-ar="ماستر ووركس - مشروع مطارات الرياض">Master Works - Riyadh Airports Project</h4>
-                    </div>
-                    <span class="location-pill" data-en="Riyadh, Saudi Arabia" data-ar="الرياض، المملكة العربية السعودية">Riyadh, Saudi Arabia</span>
-                </div>
-
-                <p class="experience-summary" data-en="Contributed to an enterprise data governance and management initiative using Informatica CDGC, supporting trusted metadata, standardized business definitions, data quality oversight, privacy classification, and governance reporting across multiple systems." data-ar="ساهمت في مبادرة مؤسسية لحوكمة وإدارة البيانات باستخدام Informatica CDGC، ودعمت البيانات الوصفية الموثوقة وتوحيد تعريفات الأعمال ومتابعة جودة البيانات وتصنيف الخصوصية وتقارير الحوكمة عبر أنظمة متعددة.">
-                    Contributed to an enterprise data governance and management initiative using Informatica CDGC, supporting trusted metadata, standardized business definitions, data quality oversight, privacy classification, and governance reporting across multiple systems.
-                </p>
-
-                <div class="experience-pillars">
-                    <article>
-                        <span>01</span>
-                        <h5 data-en="Data Management" data-ar="إدارة البيانات">Data Management</h5>
-                        <ul>
-                            <li data-en="Performed metadata scanning and organized catalog assets." data-ar="نفذت مسح البيانات الوصفية ونظمت أصول كتالوج البيانات.">Performed metadata scanning and organized catalog assets.</li>
-                            <li data-en="Created and maintained business glossary terms and definitions." data-ar="أنشأت وحافظت على مصطلحات وتعريفات قاموس الأعمال.">Created and maintained business glossary terms and definitions.</li>
-                            <li data-en="Supported ownership and stewardship assignment." data-ar="دعمت إسناد ملكية البيانات وأدوار الإشراف.">Supported ownership and stewardship assignment.</li>
-                        </ul>
-                    </article>
-                    <article>
-                        <span>02</span>
-                        <h5 data-en="Data Quality" data-ar="جودة البيانات">Data Quality</h5>
-                        <ul>
-                            <li data-en="Tracked data quality rules, coverage, and delivery progress." data-ar="تابعت قواعد جودة البيانات والتغطية وتقدم التسليم.">Tracked data quality rules, coverage, and delivery progress.</li>
-                            <li data-en="Reviewed quality activities across systems and datasets." data-ar="راجعت أنشطة الجودة عبر الأنظمة ومجموعات البيانات.">Reviewed quality activities across systems and datasets.</li>
-                            <li data-en="Presented progress through Power BI dashboards." data-ar="عرضت التقدم من خلال لوحات Power BI.">Presented progress through Power BI dashboards.</li>
-                        </ul>
-                    </article>
-                    <article>
-                        <span>03</span>
-                        <h5 data-en="Data Privacy" data-ar="خصوصية البيانات">Data Privacy</h5>
-                        <ul>
-                            <li data-en="Classified sensitive data and personally identifiable information." data-ar="صنفت البيانات الحساسة وبيانات التعريف الشخصية.">Classified sensitive data and personally identifiable information.</li>
-                            <li data-en="Supported privacy policy enforcement and traceability." data-ar="دعمت تطبيق سياسات الخصوصية وإمكانية التتبع.">Supported privacy policy enforcement and traceability.</li>
-                            <li data-en="Connected classifications with governance responsibilities." data-ar="ربطت التصنيفات بمسؤوليات الحوكمة.">Connected classifications with governance responsibilities.</li>
-                        </ul>
-                    </article>
-                </div>
-
-                <div class="tag-list" aria-label="Master Works technology stack">
-                    <span>Informatica CDGC</span>
-                    <span>Data Catalog</span>
-                    <span>Business Glossary</span>
-                    <span>Metadata Management</span>
-                    <span>Data Quality</span>
-                    <span>Data Privacy</span>
-                    <span>PII Classification</span>
-                    <span>Python</span>
-                    <span>SQL</span>
-                    <span>Power BI</span>
-                    <span>ETL</span>
-                </div>
-            </article>
-
-            <figure class="dashboard-card glass-card reveal" id="dashboardCard" tabindex="0" role="button" aria-label="Open Master Works dashboard image">
-                <div class="dashboard-copy">
-                    <span class="card-kicker" data-en="SELECTED WORK ARTIFACT" data-ar="نموذج مختار من العمل">SELECTED WORK ARTIFACT</span>
-                    <h3 data-en="Data Governance & Management Progress Dashboard" data-ar="لوحة تقدم حوكمة وإدارة البيانات">Data Governance & Management Progress Dashboard</h3>
-                    <p data-en="Power BI dashboard covering system status, business glossary distribution, PII and classification counts, data quality creation, sprint progress, deliverables, and governance targets." data-ar="لوحة Power BI تغطي حالة الأنظمة وتوزيع قاموس الأعمال وأعداد بيانات PII والتصنيفات وإنشاء قواعد الجودة وتقدم السبرنت والمخرجات ومستهدفات الحوكمة.">
-                        Power BI dashboard covering system status, business glossary distribution, PII and classification counts, data quality creation, sprint progress, deliverables, and governance targets.
-                    </p>
-                    <span class="image-hint" data-en="Click the image to enlarge" data-ar="اضغط على الصورة لتكبيرها">Click the image to enlarge</span>
-                </div>
-                <div class="dashboard-image-wrap">
-                    <img id="dashboardImage" src="./assets/images/masterworks-dashboard.png" alt="Master Works data governance and management Power BI dashboard" loading="lazy" decoding="async">
-                </div>
-            </figure>
-
-            <article class="education-card glass-card reveal">
-                <div>
-                    <span class="date-pill">Sep 2022 - Jun 2026</span>
-                    <h3 data-en="Bachelor's Degree in Computer Science" data-ar="بكالوريوس علوم الحاسب">Bachelor's Degree in Computer Science</h3>
-                    <h4 data-en="Umm Al-Qura University - Makkah" data-ar="جامعة أم القرى - مكة المكرمة">Umm Al-Qura University - Makkah</h4>
-                </div>
-                <p data-en="Academic foundation in databases, software engineering, artificial intelligence, machine learning, networks, compilers, system analysis, and full-stack development." data-ar="أساس أكاديمي في قواعد البيانات وهندسة البرمجيات والذكاء الاصطناعي وتعلم الآلة والشبكات والمترجمات وتحليل الأنظمة والتطوير المتكامل.">
-                    Academic foundation in databases, software engineering, artificial intelligence, machine learning, networks, compilers, system analysis, and full-stack development.
-                </p>
-            </article>
-        </section>
-
-        <section id="projects">
-            <div class="section-heading reveal">
-                <p class="eyebrow" data-en="SELECTED WORK" data-ar="أعمال مختارة">SELECTED WORK</p>
-                <h2 data-en="Projects" data-ar="المشاريع">Projects</h2>
-                <p data-en="The project cards focus on implementation responsibilities, technical work, and the tools used rather than long concept descriptions." data-ar="تركز بطاقات المشاريع على مسؤوليات التنفيذ والعمل التقني والأدوات المستخدمة بدلًا من الشرح الطويل لفكرة المشروع.">
-                    The project cards focus on implementation responsibilities, technical work, and the tools used rather than long concept descriptions.
-                </p>
-            </div>
-
-            <div class="project-toolbar reveal">
-                <div class="project-filters" role="group" aria-label="Project filters">
-                    <button class="filter-button active" type="button" data-filter="all" data-en="All" data-ar="الكل">All</button>
-                    <button class="filter-button" type="button" data-filter="data-ai" data-en="Data & AI" data-ar="البيانات والذكاء الاصطناعي">Data & AI</button>
-                    <button class="filter-button" type="button" data-filter="software" data-en="Software" data-ar="البرمجيات">Software</button>
-                    <button class="filter-button" type="button" data-filter="network" data-en="Networks" data-ar="الشبكات">Networks</button>
-                </div>
-                <a class="github-link" href="https://github.com/ragadsalharbi" target="_blank" rel="noopener noreferrer" data-en="View GitHub Profile ↗" data-ar="عرض حساب GitHub ↗">View GitHub Profile ↗</a>
-            </div>
-
-            <div class="projects-grid">
-                <article class="project-card glass-card reveal" data-category="software data-ai">
-                    <div class="project-number">01</div>
-                    <div class="project-meta">
-                        <span data-en="Graduation Project" data-ar="مشروع التخرج">Graduation Project</span>
-                        <time>2025 - 2026</time>
-                    </div>
-                    <h3>Ūbār</h3>
-                    <ul class="project-work">
-                        <li data-en="Implemented responsive multiplayer game logic and dynamic interface states." data-ar="نفذت منطق لعب جماعي متجاوب وحالات واجهة ديناميكية.">Implemented responsive multiplayer game logic and dynamic interface states.</li>
-                        <li data-en="Built room creation, joining, player tracking, and real-time synchronization." data-ar="بنيت إنشاء الغرف والانضمام وتتبع اللاعبين والمزامنة الفورية.">Built room creation, joining, player tracking, and real-time synchronization.</li>
-                        <li data-en="Structured Firebase data for sessions, interactions, and team performance metrics." data-ar="نظمت بيانات Firebase للجلسات والتفاعلات ومؤشرات أداء الفرق.">Structured Firebase data for sessions, interactions, and team performance metrics.</li>
-                        <li data-en="Supported usability validation with more than 54 participants using SUS metrics." data-ar="دعمت التحقق من سهولة الاستخدام لأكثر من 54 مشاركًا باستخدام مقياس SUS.">Supported usability validation with more than 54 participants using SUS metrics.</li>
-                    </ul>
-                    <div class="tag-list"><span>JavaScript</span><span>Firebase Realtime Database</span><span>Node.js</span><span>HTML</span><span>CSS</span><span>Power BI</span><span>SUS</span></div>
-                </article>
-
-                <article class="project-card glass-card reveal" data-category="software data-ai">
-                    <div class="project-number">02</div>
-                    <div class="project-meta">
-                        <span data-en="Back-End & Database" data-ar="الخلفية وقاعدة البيانات">Back-End & Database</span>
-                        <time>2025</time>
-                    </div>
-                    <h3>SmartSaver</h3>
-                    <ul class="project-work">
-                        <li data-en="Designed back-end database models for users, salaries, expenses, categories, and savings." data-ar="صممت نماذج قاعدة البيانات الخلفية للمستخدمين والرواتب والمصروفات والفئات والادخار.">Designed back-end database models for users, salaries, expenses, categories, and savings.</li>
-                        <li data-en="Developed authentication, registration, and secure user-data workflows." data-ar="طورت تسجيل الدخول وإنشاء الحساب ومسارات آمنة لبيانات المستخدم.">Developed authentication, registration, and secure user-data workflows.</li>
-                        <li data-en="Programmed salary, expense, spending, balance, and savings calculations." data-ar="برمجت حسابات الرواتب والمصروفات والإنفاق والرصيد والادخار.">Programmed salary, expense, spending, balance, and savings calculations.</li>
-                        <li data-en="Integrated financial summaries with a live dashboard and collaborated through Agile and GitHub." data-ar="ربطت الملخصات المالية بلوحة مباشرة وتعاونت باستخدام Agile وGitHub.">Integrated financial summaries with a live dashboard and collaborated through Agile and GitHub.</li>
-                    </ul>
-                    <div class="tag-list"><span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Agile/Scrum</span><span>GitHub</span></div>
-                </article>
-
-                <article class="project-card glass-card reveal" data-category="data-ai">
-                    <div class="project-number">03</div>
-                    <div class="project-meta">
-                        <span data-en="NLP & Model Evaluation" data-ar="معالجة اللغة وتقييم النماذج">NLP & Model Evaluation</span>
-                        <time>2024</time>
-                    </div>
-                    <h3 data-en="Multi-Model Sentiment Analysis" data-ar="تحليل المشاعر متعدد النماذج">Multi-Model Sentiment Analysis</h3>
-                    <ul class="project-work">
-                        <li data-en="Built an NLP inference pipeline using BERT, RoBERTa, and DistilBERT." data-ar="بنيت خط استدلال لمعالجة اللغة باستخدام BERT وRoBERTa وDistilBERT.">Built an NLP inference pipeline using BERT, RoBERTa, and DistilBERT.</li>
-                        <li data-en="Normalized model outputs into a consistent evaluation format." data-ar="وحدت مخرجات النماذج في صيغة تقييم متسقة.">Normalized model outputs into a consistent evaluation format.</li>
-                        <li data-en="Compared Accuracy, Precision, Recall, and F1-score across models." data-ar="قارنت Accuracy وPrecision وRecall وF1-score بين النماذج.">Compared Accuracy, Precision, Recall, and F1-score across models.</li>
-                        <li data-en="Developed a Streamlit interface for predictions and confidence scores." data-ar="طورت واجهة Streamlit للتنبؤات ودرجات الثقة.">Developed a Streamlit interface for predictions and confidence scores.</li>
-                    </ul>
-                    <div class="tag-list"><span>Python</span><span>Hugging Face</span><span>Transformers</span><span>Scikit-learn</span><span>Pandas</span><span>Streamlit</span></div>
-                </article>
-
-                <article class="project-card glass-card reveal" data-category="data-ai">
-                    <div class="project-number">04</div>
-                    <div class="project-meta">
-                        <span data-en="Machine Learning" data-ar="تعلم الآلة">Machine Learning</span>
-                        <time>2025</time>
-                    </div>
-                    <h3 data-en="Netflix Stock Classifier" data-ar="مصنف سهم نتفلكس">Netflix Stock Classifier</h3>
-                    <ul class="project-work">
-                        <li data-en="Prepared historical stock data and handled missing values." data-ar="جهزت بيانات الأسهم التاريخية وتعاملت مع القيم المفقودة.">Prepared historical stock data and handled missing values.</li>
-                        <li data-en="Standardized features and created model-ready datasets." data-ar="وحدت الخصائص وأنشأت مجموعات بيانات جاهزة للنموذج.">Standardized features and created model-ready datasets.</li>
-                        <li data-en="Trained and evaluated a neural-network classification model." data-ar="دربت وقيّمت نموذج تصنيف باستخدام شبكة عصبية.">Trained and evaluated a neural-network classification model.</li>
-                        <li data-en="Developed a Streamlit interface for interactive category predictions." data-ar="طورت واجهة Streamlit للتنبؤ التفاعلي بالفئات.">Developed a Streamlit interface for interactive category predictions.</li>
-                    </ul>
-                    <div class="tag-list"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Neural Network</span><span>Streamlit</span></div>
-                </article>
-
-                <article class="project-card glass-card reveal" data-category="network">
-                    <div class="project-number">05</div>
-                    <div class="project-meta">
-                        <span data-en="Network Validation & Planning" data-ar="اختبار الشبكات والتخطيط">Network Validation & Planning</span>
-                        <time>2024 - 2025</time>
-                    </div>
-                    <h3 data-en="Aljamoum Campus Network" data-ar="شبكة حرم جامعة الجموم">Aljamoum Campus Network</h3>
-                    <ul class="project-work">
-                        <li data-en="Performed systematic ping testing to validate connectivity between campus networks." data-ar="نفذت اختبارات Ping منهجية للتحقق من الاتصال بين شبكات الحرم.">Performed systematic ping testing to validate connectivity between campus networks.</li>
-                        <li data-en="Verified routing paths and documented connectivity results." data-ar="تحققت من مسارات التوجيه ووثقت نتائج الاتصال.">Verified routing paths and documented connectivity results.</li>
-                        <li data-en="Prepared equipment quantity and cost estimations for routers, switches, access points, printers, computers, and cabling." data-ar="أعددت تقديرات الكميات والتكاليف للموجهات والمحولات ونقاط الوصول والطابعات وأجهزة الحاسب والكابلات.">Prepared equipment quantity and cost estimations for routers, switches, access points, printers, computers, and cabling.</li>
-                        <li data-en="Compared networking equipment sources and summarized purchasing options." data-ar="قارنت مصادر معدات الشبكات ولخصت خيارات الشراء.">Compared networking equipment sources and summarized purchasing options.</li>
-                    </ul>
-                    <div class="tag-list"><span>Cisco Packet Tracer</span><span>Ping Testing</span><span>Routing Validation</span><span>DHCP</span><span>Static Routing</span><span>Cost Estimation</span></div>
-                </article>
-
-                <article class="project-card glass-card reveal" data-category="software">
-                    <div class="project-number">06</div>
-                    <div class="project-meta">
-                        <span data-en="Software Analysis & Modeling" data-ar="تحليل ونمذجة البرمجيات">Software Analysis & Modeling</span>
-                        <time>2024</time>
-                    </div>
-                    <h3 data-en="Recipe Sharing Platform" data-ar="منصة مشاركة الوصفات">Recipe Sharing Platform</h3>
-                    <ul class="project-work">
-                        <li data-en="Defined functional requirements, actors, and end-to-end user workflows." data-ar="حددت المتطلبات الوظيفية والأطراف ومسارات المستخدم الكاملة.">Defined functional requirements, actors, and end-to-end user workflows.</li>
-                        <li data-en="Created use-case models for authentication, recipe management, ratings, comments, complaints, and administration." data-ar="أنشأت نماذج حالات استخدام لتسجيل الدخول وإدارة الوصفات والتقييمات والتعليقات والشكاوى والإدارة.">Created use-case models for authentication, recipe management, ratings, comments, complaints, and administration.</li>
-                        <li data-en="Produced conceptual class models, sequence diagrams, state charts, and finite state machines." data-ar="أنشأت نماذج الفئات المفاهيمية ومخططات التسلسل ومخططات الحالة وآلات الحالات المحدودة.">Produced conceptual class models, sequence diagrams, state charts, and finite state machines.</li>
-                        <li data-en="Documented system boundaries, account verification, content moderation, and admin workflows." data-ar="وثقت حدود النظام والتحقق من الحسابات والإشراف على المحتوى ومسارات الإدارة.">Documented system boundaries, account verification, content moderation, and admin workflows.</li>
-                    </ul>
-                    <div class="tag-list"><span>UML</span><span>Use Cases</span><span>Class Modeling</span><span>FSM</span><span>Sequence Diagrams</span><span>System Analysis</span></div>
-                </article>
-
-                <article class="project-card glass-card reveal" data-category="software">
-                    <div class="project-number">07</div>
-                    <div class="project-meta">
-                        <span data-en="Object-Oriented System" data-ar="نظام برمجة كائنية">Object-Oriented System</span>
-                        <time>Academic Project</time>
-                    </div>
-                    <h3 data-en="Student Information System" data-ar="نظام معلومات الطلاب">Student Information System</h3>
-                    <ul class="project-work">
-                        <li data-en="Implemented the Role class for defining and managing user roles." data-ar="نفذت فئة Role لتعريف أدوار المستخدمين وإدارتها.">Implemented the Role class for defining and managing user roles.</li>
-                        <li data-en="Supported role operations including add, edit, delete, and search." data-ar="دعمت عمليات الأدوار التي تشمل الإضافة والتعديل والحذف والبحث.">Supported role operations including add, edit, delete, and search.</li>
-                        <li data-en="Modeled role and permission relationships within the object-oriented system structure." data-ar="نمذجت علاقات الأدوار والصلاحيات ضمن بنية النظام الكائنية.">Modeled role and permission relationships within the object-oriented system structure.</li>
-                        <li data-en="Contributed to menu hierarchy, UML structure, and modular class responsibilities." data-ar="ساهمت في هيكل القوائم وبنية UML وتوزيع مسؤوليات الفئات.">Contributed to menu hierarchy, UML structure, and modular class responsibilities.</li>
-                    </ul>
-                    <div class="tag-list"><span>OOP</span><span>Role Management</span><span>Access Control</span><span>UML</span><span>CRUD Operations</span><span>System Design</span></div>
-                </article>
-
-                <article class="project-card glass-card reveal" data-category="software">
-                    <div class="project-number">08</div>
-                    <div class="project-meta">
-                        <span data-en="Compiler Construction" data-ar="بناء المترجمات">Compiler Construction</span>
-                        <time>Academic Project</time>
-                    </div>
-                    <h3 data-en="Java Lexical Analyzer" data-ar="محلل لغوي باستخدام Java">Java Lexical Analyzer</h3>
-                    <ul class="project-work">
-                        <li data-en="Implemented token recognition for numbers, variables, reserved words, operators, parentheses, and semicolons." data-ar="نفذت التعرف على الرموز للأرقام والمتغيرات والكلمات المحجوزة والمعاملات والأقواس والفواصل المنقوطة.">Implemented token recognition for numbers, variables, reserved words, operators, parentheses, and semicolons.</li>
-                        <li data-en="Built reserved-word lookup using HashSet and case-insensitive matching." data-ar="بنيت البحث عن الكلمات المحجوزة باستخدام HashSet ومطابقة غير حساسة لحالة الأحرف.">Built reserved-word lookup using HashSet and case-insensitive matching.</li>
-                        <li data-en="Handled line comments, block comments, invalid characters, and unclosed comment errors." data-ar="عالجت تعليقات السطر وتعليقات الكتل والمحارف غير الصالحة وأخطاء التعليقات غير المغلقة.">Handled line comments, block comments, invalid characters, and unclosed comment errors.</li>
-                        <li data-en="Used PushbackReader to manage character streams and return precise token types." data-ar="استخدمت PushbackReader لإدارة تدفق المحارف وإرجاع أنواع رموز دقيقة.">Used PushbackReader to manage character streams and return precise token types.</li>
-                    </ul>
-                    <div class="tag-list"><span>Java</span><span>Lexical Analysis</span><span>Tokenization</span><span>PushbackReader</span><span>HashSet</span><span>Error Handling</span></div>
-                </article>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="section-heading reveal">
-                <p class="eyebrow" data-en="CAPABILITIES" data-ar="القدرات">CAPABILITIES</p>
-                <h2 data-en="Skills & Technology Stack" data-ar="المهارات والتقنيات">Skills & Technology Stack</h2>
-                <p data-en="A multidisciplinary toolkit for data, governance, AI, software development, visualization, networks, and system design." data-ar="مجموعة أدوات متعددة التخصصات للبيانات والحوكمة والذكاء الاصطناعي وتطوير البرمجيات والتصور المرئي والشبكات وتصميم الأنظمة.">
-                    A multidisciplinary toolkit for data, governance, AI, software development, visualization, networks, and system design.
-                </p>
-            </div>
-
-            <div class="skills-grid">
-                <article class="skill-card glass-card reveal">
-                    <span class="skill-index">01</span>
-                    <h3 data-en="Data Engineering" data-ar="هندسة البيانات">Data Engineering</h3>
-                    <div class="skill-tags"><span>Data Pipelines</span><span>ETL</span><span>Data Cleaning</span><span>SQL</span><span>Python</span><span>Data Warehousing</span></div>
-                </article>
-                <article class="skill-card glass-card reveal">
-                    <span class="skill-index">02</span>
-                    <h3 data-en="Governance, Quality & Privacy" data-ar="الحوكمة والجودة والخصوصية">Governance, Quality & Privacy</h3>
-                    <div class="skill-tags"><span>Informatica CDGC</span><span>Metadata</span><span>Business Glossary</span><span>Data Quality</span><span>Privacy</span><span>PII</span></div>
-                </article>
-                <article class="skill-card glass-card reveal">
-                    <span class="skill-index">03</span>
-                    <h3 data-en="AI & Analytics" data-ar="الذكاء الاصطناعي والتحليلات">AI & Analytics</h3>
-                    <div class="skill-tags"><span>Machine Learning</span><span>NLP</span><span>Hugging Face</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Streamlit</span><span>Power BI</span></div>
-                </article>
-                <article class="skill-card glass-card reveal">
-                    <span class="skill-index">04</span>
-                    <h3 data-en="Development & Databases" data-ar="التطوير وقواعد البيانات">Development & Databases</h3>
-                    <div class="skill-tags"><span>JavaScript</span><span>Java</span><span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span><span>Firebase</span><span>Node.js</span><span>GitHub</span></div>
-                </article>
-                <article class="skill-card glass-card reveal">
-                    <span class="skill-index">05</span>
-                    <h3 data-en="Systems & Networks" data-ar="الأنظمة والشبكات">Systems & Networks</h3>
-                    <div class="skill-tags"><span>OOP</span><span>UML</span><span>System Analysis</span><span>Cisco Packet Tracer</span><span>DHCP</span><span>Static Routing</span><span>Ping Testing</span></div>
-                </article>
-            </div>
-
-            <article class="soft-skills-card glass-card reveal">
-                <div class="soft-skills-heading">
-                    <span class="card-kicker" data-en="PROFESSIONAL SKILLS" data-ar="المهارات المهنية">PROFESSIONAL SKILLS</span>
-                    <h3 data-en="Soft Skills" data-ar="المهارات الناعمة">Soft Skills</h3>
-                    <p data-en="Skills that support clear communication, dependable delivery, collaboration, and continuous improvement." data-ar="مهارات تدعم التواصل الواضح والتسليم الموثوق والتعاون والتطوير المستمر.">Skills that support clear communication, dependable delivery, collaboration, and continuous improvement.</p>
-                </div>
-                <div class="soft-skill-list">
-                    <span data-en="Communication" data-ar="التواصل">Communication</span>
-                    <span data-en="Teamwork" data-ar="العمل الجماعي">Teamwork</span>
-                    <span data-en="Time Management" data-ar="إدارة الوقت">Time Management</span>
-                    <span data-en="Problem Solving" data-ar="حل المشكلات">Problem Solving</span>
-                    <span data-en="Collaboration" data-ar="التعاون">Collaboration</span>
-                    <span data-en="Analytical Thinking" data-ar="التفكير التحليلي">Analytical Thinking</span>
-                    <span data-en="Attention to Detail" data-ar="الاهتمام بالتفاصيل">Attention to Detail</span>
-                    <span data-en="Adaptability" data-ar="المرونة">Adaptability</span>
-                    <span data-en="Presentation Skills" data-ar="مهارات العرض">Presentation Skills</span>
-                    <span data-en="Documentation" data-ar="التوثيق">Documentation</span>
-                    <span data-en="Ownership" data-ar="تحمل المسؤولية">Ownership</span>
-                    <span data-en="Continuous Learning" data-ar="التعلم المستمر">Continuous Learning</span>
-                </div>
-            </article>
-        </section>
-
-        <section id="certifications" class="reveal">
-<h2>Certifications & Training</h2>
-<div class="cert-grid">
-<div class="cert-card">LinkedIn Certifications<br><small>Data • AI • Technology</small></div>
-<div class="cert-card">Professional Training<br><small>Continuous Learning</small></div>
-<div class="cert-card">Technical Skills<br><small>Python • SQL • Power BI</small></div>
-</div>
-</section>
-<section id="contact">
-            <div class="contact-panel glass-card reveal">
-                <div class="contact-intro">
-                    <p class="eyebrow" data-en="LET'S CONNECT" data-ar="لنتواصل">LET'S CONNECT</p>
-                    <h2 data-en="Ready to build trusted data and intelligent products." data-ar="جاهزة لبناء بيانات موثوقة ومنتجات ذكية.">Ready to build trusted data and intelligent products.</h2>
-                    <p data-en="Open to opportunities in Data Engineering, Data Governance, Data Quality, Artificial Intelligence, Machine Learning, and Software Development." data-ar="مهتمة بفرص هندسة البيانات وحوكمة البيانات وجودة البيانات والذكاء الاصطناعي وتعلم الآلة وتطوير البرمجيات.">
-                        Open to opportunities in Data Engineering, Data Governance, Data Quality, Artificial Intelligence, Machine Learning, and Software Development.
-                    </p>
-                    <a class="button button-primary" href="mailto:ragadsalharbi@gmail.com" data-en="Send an Email" data-ar="إرسال بريد إلكتروني">Send an Email</a>
-                </div>
-
-                <div class="contact-links">
-                    <a href="mailto:ragadsalharbi@gmail.com">
-                        <span class="contact-icon">@</span>
-                        <span><small data-en="Email" data-ar="البريد الإلكتروني">Email</small><strong>ragadsalharbi@gmail.com</strong></span>
-                    </a>
-                    <a href="tel:+966557820184">
-                        <span class="contact-icon">TEL</span>
-                        <span><small data-en="Phone" data-ar="رقم الجوال">Phone</small><strong>+966 55 782 0184</strong></span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/raghad-alharbi-38a61b326/" target="_blank" rel="noopener noreferrer">
-                        <span class="contact-icon">in</span>
-                        <span><small>LinkedIn</small><strong>Raghad Alharbi</strong></span>
-                    </a>
-                    <a href="https://github.com/ragadsalharbi" target="_blank" rel="noopener noreferrer">
-                        <span class="contact-icon">GH</span>
-                        <span><small>GitHub</small><strong>ragadsalharbi</strong></span>
-                    </a>
-                    <a href="https://x.com/raghadssalharbi" target="_blank" rel="noopener noreferrer">
-                        <span class="contact-icon">X</span>
-                        <span><small data-en="X / Twitter" data-ar="إكس / تويتر">X / Twitter</small><strong>@raghadssalharbi</strong></span>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1nHW1d4ZXNmaGtXAYb4l4yYhcRktjCufw/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                        <span class="contact-icon">CV</span>
-                        <span><small data-en="Resume" data-ar="السيرة الذاتية">Resume</small><strong data-en="View CV" data-ar="عرض السيرة الذاتية">View CV</strong></span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>RΛD Portfolio</p>
-    </footer>
-
-    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
-
-    <div class="image-modal" id="imageModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Dashboard image preview">
-        <button class="modal-close" id="modalClose" type="button" aria-label="Close image preview">×</button>
-        <img id="modalImage" src="./assets/images/masterworks-dashboard.png" alt="Expanded Master Works data governance dashboard">
+    <div class="reach">
+      <a class="reach-btn" href="https://github.com/ragadsalharbi" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+      </a>
+      <a class="reach-btn" href="https://www.linkedin.com/in/raghad-alharbi-38a61b326/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.2 8.5h4.6V24H.2zM8.3 8.5h4.4v2.1h.06c.61-1.1 2.1-2.3 4.34-2.3 4.64 0 5.5 2.9 5.5 6.7V24h-4.6v-7.6c0-1.8-.03-4.2-2.5-4.2-2.5 0-2.9 1.9-2.9 4v7.8H8.3z"/></svg>
+      </a>
+      <a class="reach-btn" href="mailto:ragadsalharbi@gmail.com" aria-label="Email" title="Email">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4.5" width="20" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>
+      </a>
+      <a class="reach-btn" href="https://wa.me/966557820184" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A9.9 9.9 0 1 0 12 2zm0 18a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20zm4.5-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5 0a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2a.4.4 0 0 0 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
+      </a>
     </div>
 
-    <script src="script.js"></script>
+    <button class="btn btn-primary" id="saveContact" data-en="Save contact" data-ar="حفظ جهة الاتصال">Save contact</button>
+    <a class="btn" href="https://drive.google.com/file/d/11kZICcSPRaDs0uCANiD9xD4XydNGRMwh/view?usp=sharing" target="_blank" rel="noopener" data-en="Download CV" data-ar="تحميل السيرة">Download CV</a>
+
+    <div class="prefs">
+      <button class="pref" id="themeBtn">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Light</span>
+      </button>
+      <div class="lang">
+        <button class="lang-btn is-active" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="ar">عربي</button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ==================== MAIN ==================== -->
+<main class="main" id="main">
+
+  <!-- ---------- HERO ---------- -->
+  <section id="about" class="section hero">
+
+    <p class="status"><i></i><span data-en="Open to opportunities" data-ar="متاحة للفرص">Open to opportunities</span></p>
+
+    <h2 class="headline">
+      <span data-en="Messy data in." data-ar="بيانات فوضوية تدخل.">Messy data in.</span><br>
+      <span class="headline-b" data-en="Answers out." data-ar="إجابات تخرج.">Answers out.</span>
+    </h2>
+
+    <p class="lede" data-en="Computer Science graduate in Riyadh. I model data, clean it, move it, then make it say something useful — with SQL, Python and Power BI." data-ar="خريجة علوم حاسب في الرياض. أنمذج البيانات وأنظّفها وأنقلها، ثم أُخرج منها شيئاً مفيداً — بـ SQL و Python و Power BI.">Computer Science graduate in Riyadh. I model data, clean it, move it, then make it say something useful — with SQL, Python and Power BI.</p>
+
+    <!-- ---- interactive SQL console ---- -->
+    <div class="console">
+
+      <div class="console-bar">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="console-title">raghad@portfolio — psql 16.2</span>
+      </div>
+
+      <div class="tabs" id="tabs">
+        <button class="tab is-active" data-q="0" data-en="profile" data-ar="الملف">profile</button>
+        <button class="tab" data-q="1" data-en="projects" data-ar="المشاريع">projects</button>
+        <button class="tab" data-q="2" data-en="skills" data-ar="المهارات">skills</button>
+        <button class="tab" data-q="3" data-en="contact" data-ar="التواصل">contact</button>
+      </div>
+
+      <div class="console-body" dir="ltr">
+        <pre class="sql"><span class="ps1">portfolio=#</span> <code id="sql"></code><span class="caret" id="caret"></span></pre>
+        <div class="result" id="result" hidden>
+          <div class="table-wrap">
+            <table class="rows"><thead id="thead"></thead><tbody id="tbody"></tbody></table>
+          </div>
+          <p class="meta" id="meta"></p>
+        </div>
+      </div>
+
+      <div class="console-foot">
+        <span class="hint" data-en="Switch tabs to run a different query." data-ar="بدّلي التبويب لتشغيل استعلام آخر.">Switch tabs to run a different query.</span>
+        <button class="rerun" id="rerun" data-en="Run" data-ar="تشغيل">Run</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ---------- EXPERIENCE ---------- -->
+  <section id="experience" class="section">
+    <h3 class="h3" data-en="Experience" data-ar="الخبرة">Experience</h3>
+
+    <article class="block">
+      <div class="block-head">
+        <div>
+          <h4 data-en="Data Governance Intern — Co-op" data-ar="متدربة حوكمة بيانات — تعاوني">Data Governance Intern — Co-op</h4>
+          <p class="org">Master Works · Riyadh</p>
+        </div>
+        <span class="when">03/2025 – 07/2025</span>
+      </div>
+      <ul class="bullets">
+        <li data-en="Built and maintained the centralised metadata layer for an enterprise data programme — a data catalog and business glossary in Informatica CDGC spanning multiple ERP and operational source systems." data-ar="بنيت وصنت طبقة البيانات الوصفية المركزية لبرنامج بيانات مؤسسي — كتالوج بيانات وقاموس أعمال في Informatica CDGC يغطي عدة أنظمة ERP وتشغيلية.">Built and maintained the centralised metadata layer for an enterprise data programme — a data catalog and business glossary in Informatica CDGC spanning multiple ERP and operational source systems.</li>
+        <li data-en="Ran automated metadata scans to profile and classify data assets, mapping sensitive and personally identifiable fields to support privacy controls and ownership assignment." data-ar="نفّذت فحوصات آلية للبيانات الوصفية لتوصيف وتصنيف أصول البيانات، مع ربط الحقول الحساسة والشخصية لدعم ضوابط الخصوصية وإسناد الملكية.">Ran automated metadata scans to profile and classify data assets, mapping sensitive and personally identifiable fields to support privacy controls and ownership assignment.</li>
+        <li data-en="Defined and monitored data quality rules across governed datasets, and built Power BI dashboards tracking rule coverage, classification progress and delivery against programme targets." data-ar="عرّفت وتابعت قواعد جودة البيانات عبر مجموعات البيانات المحكومة، وبنيت لوحات Power BI لتتبع تغطية القواعد وتقدّم التصنيف والتسليم مقابل أهداف البرنامج.">Defined and monitored data quality rules across governed datasets, and built Power BI dashboards tracking rule coverage, classification progress and delivery against programme targets.</li>
+      </ul>
+      <p class="tech">Informatica CDGC · SQL · Python · Power BI · ETL · Data Warehousing</p>
+    </article>
+  </section>
+
+  <!-- ---------- PROJECTS ---------- -->
+  <section id="projects" class="section">
+    <h3 class="h3" data-en="Projects" data-ar="المشاريع">Projects</h3>
+    <p class="note" data-en="Every card opens its repository on GitHub." data-ar="كل بطاقة تفتح مستودعها على قتهب.">Every card opens its repository on GitHub.</p>
+
+    <div class="filters">
+      <button class="filter is-active" data-filter="all" data-en="All" data-ar="الكل">All</button>
+      <button class="filter" data-filter="data" data-en="Data &amp; ML" data-ar="بيانات وتعلّم آلة">Data &amp; ML</button>
+      <button class="filter" data-filter="eng" data-en="Engineering" data-ar="هندسة">Engineering</button>
+      <button class="filter" data-filter="net" data-en="Networks" data-ar="شبكات">Networks</button>
+    </div>
+
+    <div class="grid">
+
+      <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/sentiment-classification-huggingface" target="_blank" rel="noopener">
+        <span class="dot" style="--dot:#3572A5"></span>
+        <h4>Sentiment Classification</h4>
+        <p class="repo">sentiment-classification-huggingface</p>
+        <p class="desc" data-en="Benchmarked DistilBERT, RoBERTa and BERT on a token-normalised IMDb subset, unifying three different label formats into one binary scale. DistilBERT led at 90% accuracy and 88.6% F1, deployed in a Streamlit demo." data-ar="قارنت DistilBERT و RoBERTa و BERT على عينة IMDb موحّدة الطول، ووحّدت ثلاث صيغ تصنيف مختلفة في مقياس ثنائي واحد. تصدّر DistilBERT بدقة ٩٠٪ و F1 ٨٨٫٦٪، ونُشر في تطبيق Streamlit.">Benchmarked DistilBERT, RoBERTa and BERT on a token-normalised IMDb subset, unifying three different label formats into one binary scale. DistilBERT led at 90% accuracy and 88.6% F1, deployed in a Streamlit demo.</p>
+        <p class="tags">Python · Hugging Face · scikit-learn · Streamlit</p>
+      </a>
+
+      <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/spam-detection-machine-learning" target="_blank" rel="noopener">
+        <span class="dot" style="--dot:#3572A5"></span>
+        <h4>SMS Spam Detection</h4>
+        <p class="repo">spam-detection-machine-learning</p>
+        <p class="desc" data-en="Text classification pipeline from preprocessing through model comparison, benchmarking Naive Bayes against SVM and selecting on precision — the metric that matters when a false positive hides a real message. 97% accuracy, 98% precision." data-ar="مسار تصنيف نصوص من المعالجة الأولية حتى مقارنة النماذج، بين Naive Bayes و SVM، والاختيار على أساس الـ precision — المقياس الأهم حين يخفي الإيجاب الكاذب رسالة حقيقية. دقة ٩٧٪ و precision ٩٨٪.">Text classification pipeline from preprocessing through model comparison, benchmarking Naive Bayes against SVM and selecting on precision — the metric that matters when a false positive hides a real message. 97% accuracy, 98% precision.</p>
+        <p class="tags">Python · scikit-learn · NLTK · Streamlit</p>
+      </a>
+
+      <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/video-game-sales-prediction" target="_blank" rel="noopener">
+        <span class="dot" style="--dot:#3572A5"></span>
+        <h4>Video Game Sales Analysis</h4>
+        <p class="repo">video-game-sales-prediction</p>
+        <p class="desc" data-en="End-to-end analysis pipeline — cleaning, handling missing and inconsistent records, exploring sales across genre, platform and publisher, then a regression model evaluated on MSE and R². Findings delivered as an interactive dashboard." data-ar="مسار تحليل متكامل — تنظيف ومعالجة السجلات الناقصة وغير المتسقة، واستكشاف المبيعات حسب النوع والمنصة والناشر، ثم نموذج انحدار مُقيَّم بـ MSE و R². وعُرضت النتائج في لوحة تفاعلية.">End-to-end analysis pipeline — cleaning, handling missing and inconsistent records, exploring sales across genre, platform and publisher, then a regression model evaluated on MSE and R². Findings delivered as an interactive dashboard.</p>
+        <p class="tags">Python · Pandas · scikit-learn · Plotly · Streamlit</p>
+      </a>
+
+      <a class="card" data-cat="eng" href="https://github.com/ragadsalharbi/hospital-database-management-system" target="_blank" rel="noopener">
+        <span class="dot" style="--dot:#e38c00"></span>
+        <h4>Hospital Database System</h4>
+        <p class="repo">hospital-database-management-system</p>
+        <p class="desc" data-en="Modelled and normalised a relational MySQL schema for hospital operations, with a full ERD and enforced key constraints. Analytical SQL using multi-table joins and aggregations to report on patient volume, appointment load and departmental activity." data-ar="نمذجت وطبّعت مخططاً علائقياً في MySQL لعمليات المستشفى، مع ERD كامل وقيود مفاتيح مُطبَّقة. واستعلامات تحليلية بربط جداول متعددة وتجميعات لتقارير حجم المرضى والمواعيد ونشاط الأقسام.">Modelled and normalised a relational MySQL schema for hospital operations, with a full ERD and enforced key constraints. Analytical SQL using multi-table joins and aggregations to report on patient volume, appointment load and departmental activity.</p>
+        <p class="tags">MySQL · SQL · Data Modelling · ERD</p>
+      </a>
+
+      <a class="card wide" data-cat="eng" href="https://github.com/ragadsalharbi/UBAR" target="_blank" rel="noopener">
+        <span class="dot" style="--dot:#f1e05a"></span>
+        <span class="badge" data-en="Graduation project" data-ar="مشروع التخرج">Graduation project</span>
+        <h4>Übār</h4>
+        <p class="repo">UBAR</p>
+        <p class="desc" data-en="Designed the Firebase Realtime Database structure for concurrent game sessions, engineering concurrency-safe room state, presence tracking and automatic host re-election on disconnect. Ran usability testing with 54 participants and analysed the results using the System Usability Scale." data-ar="صمّمت بنية Firebase Realtime Database لجلسات اللعب المتزامنة، وهندست حالة غرف آمنة للتزامن وتتبّع الحضور وإعادة انتخاب المضيف تلقائياً عند الانقطاع. ونفّذت اختبار قابلية استخدام مع ٥٤ مشاركاً وحلّلت النتائج بمقياس SUS.">Designed the Firebase Realtime Database structure for concurrent game sessions, engineering concurrency-safe room state, presence tracking and automatic host re-election on disconnect. Ran usability testing with 54 participants and analysed the results using the System Usability Scale.</p>
+        <p class="tags">JavaScript (ES Modules) · Firebase Realtime Database · Node.js</p>
+      </a>
+
+      <a class="card" data-cat="net" href="https://github.com/ragadsalharbi/aljamoum-campus-network" target="_blank" rel="noopener">
+        <span class="dot" style="--dot:#6EE7C8"></span>
+        <h4>Aljamoum Campus Network</h4>
+        <p class="repo">aljamoum-campus-network</p>
+        <p class="desc" data-en="Three-building campus network in Packet Tracer with per-building DHCP pools and static routing over a triangle topology. My part: connectivity validation across every building pair, and the equipment inventory and cost estimate." data-ar="شبكة جامعية بثلاثة مبانٍ في Packet Tracer مع مجمّعات DHCP لكل مبنى وتوجيه ثابت عبر طوبولوجيا مثلثة. دوري: التحقق من الاتصال بين كل زوج مبانٍ، وحصر المعدات وتقدير التكلفة.">Three-building campus network in Packet Tracer with per-building DHCP pools and static routing over a triangle topology. My part: connectivity validation across every building pair, and the equipment inventory and cost estimate.</p>
+        <p class="tags">Cisco IOS · Packet Tracer · DHCP · Static routing · Subnetting</p>
+      </a>
+
+      <a class="card" data-cat="eng" href="https://github.com/ragadsalharbi/SmartSaver" target="_blank" rel="noopener">
+        <span class="dot" style="--dot:#8993be"></span>
+        <span class="badge quiet" data-en="Team project · forked" data-ar="مشروع جماعي · متفرّع">Team project · forked</span>
+        <h4>SmartSaver</h4>
+        <p class="repo">SmartSaver</p>
+        <p class="desc" data-en="Personal finance tracker. I built the back end: the relational model for users, salaries and expenses, authentication, and the calculation layer for savings allocation, category totals and remaining surplus." data-ar="متتبّع مالي شخصي. بنيت الواجهة الخلفية: النموذج العلائقي للمستخدمين والرواتب والمصروفات، والمصادقة، وطبقة الحسابات لتخصيص الادخار وإجماليات الفئات والفائض المتبقي.">Personal finance tracker. I built the back end: the relational model for users, salaries and expenses, authentication, and the calculation layer for savings allocation, category totals and remaining surplus.</p>
+        <p class="tags">PHP · MySQL · JavaScript</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ---------- SKILLS ---------- -->
+  <section id="skills" class="section">
+    <h3 class="h3" data-en="Skills" data-ar="المهارات">Skills</h3>
+
+    <div class="skills">
+      <div class="skill">
+        <h4 data-en="Data engineering &amp; databases" data-ar="هندسة البيانات وقواعد البيانات">Data engineering &amp; databases</h4>
+        <p>SQL · MySQL · Data Modelling · ETL · Data Warehousing · Firebase Realtime Database</p>
+      </div>
+      <div class="skill">
+        <h4 data-en="Analysis &amp; BI" data-ar="التحليل وذكاء الأعمال">Analysis &amp; BI</h4>
+        <p>Pandas · NumPy · scikit-learn · Power BI · Plotly · Streamlit · Data Profiling</p>
+      </div>
+      <div class="skill">
+        <h4 data-en="Data governance" data-ar="حوكمة البيانات">Data governance</h4>
+        <p>Informatica CDGC · Data Catalog · Business Glossary · Metadata Management · Data Classification · Data Quality</p>
+      </div>
+      <div class="skill">
+        <h4 data-en="Programming &amp; tools" data-ar="البرمجة والأدوات">Programming &amp; tools</h4>
+        <p>Python · SQL · JavaScript · PHP · Git · GitHub · Agile/Scrum</p>
+      </div>
+      <div class="skill quiet">
+        <h4 data-en="Coursework exposure" data-ar="مواد دراسية">Coursework exposure</h4>
+        <p>Apache Spark · PySpark · Big Data Concepts · Cloud Computing (Azure IaaS) · Cisco Networking</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- EDUCATION ---------- -->
+  <section id="education" class="section">
+    <h3 class="h3" data-en="Education" data-ar="التعليم">Education</h3>
+    <article class="block">
+      <div class="block-head">
+        <div>
+          <h4 data-en="BSc Computer Science" data-ar="بكالوريوس علوم الحاسب">BSc Computer Science</h4>
+          <p class="org" data-en="Umm Al-Qura University · Makkah" data-ar="جامعة أم القرى · مكة المكرمة">Umm Al-Qura University · Makkah</p>
+        </div>
+        <span class="when">09/2022 – 06/2026</span>
+      </div>
+      <p class="tech" data-en="Databases · Software engineering · Networks · Compilers · System analysis · Machine learning · NLP · Cloud computing" data-ar="قواعد البيانات · هندسة البرمجيات · الشبكات · المترجمات · تحليل النظم · تعلّم الآلة · معالجة اللغة · الحوسبة السحابية">Databases · Software engineering · Networks · Compilers · System analysis · Machine learning · NLP · Cloud computing</p>
+    </article>
+  </section>
+
+  <!-- ---------- CONTACT ---------- -->
+  <section id="contact" class="section">
+    <h3 class="h3" data-en="Contact" data-ar="التواصل">Contact</h3>
+    <p class="lede small" data-en="Open to data analyst and data engineer roles in Riyadh. Email is the fastest way to reach me." data-ar="متاحة لوظائف تحليل وهندسة البيانات في الرياض. البريد الإلكتروني أسرع طريقة للتواصل.">Open to data analyst and data engineer roles in Riyadh. Email is the fastest way to reach me.</p>
+
+    <div class="contacts">
+      <a class="contact" href="mailto:ragadsalharbi@gmail.com"><span data-en="Email" data-ar="البريد">Email</span><b>ragadsalharbi@gmail.com</b></a>
+      <a class="contact" href="https://wa.me/966557820184" target="_blank" rel="noopener"><span>WhatsApp</span><b dir="ltr">+966 55 782 0184</b></a>
+      <a class="contact" href="https://github.com/ragadsalharbi" target="_blank" rel="noopener"><span>GitHub</span><b>ragadsalharbi</b></a>
+      <a class="contact" href="https://www.linkedin.com/in/raghad-alharbi-38a61b326/" target="_blank" rel="noopener"><span>LinkedIn</span><b>Raghad Alharbi</b></a>
+    </div>
+
+    <footer class="foot">
+      <span>© <span id="year">2026</span> Raghad Sultan Alharbi</span>
+      <span data-en="Built from scratch — HTML, CSS, JavaScript" data-ar="مبني من الصفر — HTML و CSS و JavaScript">Built from scratch — HTML, CSS, JavaScript</span>
+    </footer>
+  </section>
+
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
