@@ -5,46 +5,62 @@ Live at **[ragadsalharbi.github.io](https://ragadsalharbi.github.io)**
 
 No framework, no build step, no image files. Three files.
 
-## What it does
+## The idea
 
-- **Interactive SQL console** — four real queries (`profile`, `projects`,
-  `skills`, `contact`). Each types itself out with syntax highlighting and
-  returns a result set with row count and timing.
-- **RΛD monogram** — SVG letterforms that stroke-draw on load, with a
-  sparkline beneath. No image file, so nothing can 404.
-- Dark / light mode, remembered between visits
-- English / Arabic with full RTL layout — including the console tables
-- Project filtering; every card links to its repository
-- Save contact downloads a `.vcf`
-- Responsive to mobile, keyboard accessible, honours `prefers-reduced-motion`
+The tagline is *Messy data in. Answers out.* — so the hero draws it. Dots enter
+from the left in disorder, funnel through a gate, and settle into ordered
+columns on the right.
 
-## Structure
+## Features
 
-```text
-.
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+- **Animated hero canvas** — particles resolving from noise into a bar chart.
+  Self-heals if the layout resolves late; colours follow the active theme;
+  falls back to a static chart under `prefers-reduced-motion`.
+- **Interactive SQL console** — four queries that type themselves with syntax
+  highlighting and return result sets with row counts and timings.
+- **RΛD monogram** — SVG letterforms that stroke-draw on load. The A has no
+  crossbar. Inline SVG, so nothing can 404.
+- **Frameless icon links** — bare glyphs that lift on hover and reveal their
+  label beneath.
+- Dark / light mode · English / Arabic with full RTL · project filtering
+- Responsive, keyboard accessible, honours `prefers-reduced-motion`
+
+## Palette
+
+One cool family — background, surfaces and accent are all blue-cyan at
+different depths, so nothing floats.
+
 ```
+--b-950  #030B12   page
+--b-800  #071A27   cards
+--teal   #2DD4BF   accent
+--sky    #4FB6E8   dates
+--ice    #A5F3FC   numerals
+```
+
+`--flow-line` and `--flow-a` control the hero canvas and are redefined per
+theme, so the animation stays legible in light mode.
+
+## Breakpoints
+
+| Width | Behaviour |
+|---|---|
+| > 940px | full nav, icon labels on hover |
+| ≤ 940px | nav collapses to the burger sheet, two icons, labels off |
+| ≤ 700px | single column, 60px rail, tighter hero, canvas at 55% opacity |
+
+The menu sheet is `display:none` by default and only shows with `.is-open`.
+It is force-hidden above 940px and auto-closes on resize back to desktop.
 
 ## Updating
 
-**Console queries** — the `QUERIES` array at the top of `script.js`. Each entry
-has `sql`, `head` and `rows`, in both languages. Adding a query means adding an
-entry plus one `<button class="tab">` in `index.html`.
-
-**Contact details** — the `ME` object in `script.js`. The vCard reads from it.
-
-**Any text** — every translatable element carries `data-en` and `data-ar`.
-Edit both.
-
-**A new project** — copy an `<a class="card">` block and update `href`,
-`data-cat` (`data` / `eng` / `net`), title, repo name, description and tags.
-
-**Colours** — `:root` and `[data-theme="light"]` at the top of `style.css`.
+**Console queries** — the `QUERIES` array in `script.js`.
+**Hero animation** — `startFlow()`; `COLS` sets the bar count.
+**Contact details** — the `ME` object in `script.js`.
+**Any text** — every element carries `data-en` and `data-ar`. Edit both.
+**Colours** — `:root` and `[data-theme="light"]` in `style.css`.
 
 ## Deploying
 
-Push to the `ragadsalharbi.github.io` repository. GitHub Pages serves the root
-of `main`; changes appear within a minute or two.
+Push to the `ragadsalharbi.github.io` repository, then **hard-refresh**
+(`Ctrl`/`Cmd` + `Shift` + `R`). Browsers cache `script.js` aggressively.

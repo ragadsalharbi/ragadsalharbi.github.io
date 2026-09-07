@@ -6,294 +6,291 @@
 <title>Raghad Alharbi — Data Analyst &amp; Data Engineer</title>
 <meta name="description" content="Raghad Alharbi — data analyst and data engineer in Riyadh. SQL, Python, Power BI. Computer Science graduate, Umm Al-Qura University.">
 <meta property="og:title" content="Raghad Alharbi — Data Analyst &amp; Data Engineer">
-<meta property="og:description" content="Data modelling, pipelines and analysis. Riyadh, Saudi Arabia.">
+<meta property="og:description" content="Messy data in. Answers out. Riyadh, Saudi Arabia.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ragadsalharbi.github.io">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a class="skip" href="#main" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
+<a class="skip" href="#work" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
 
-<button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="sidebar">
-  <span></span><span></span><span></span>
-</button>
-<div class="scrim" id="scrim" hidden></div>
+<!-- ==================== TOP RAIL ==================== -->
+<header class="rail" id="rail">
+  <a class="rail-mark" href="#top" aria-label="Raghad Alharbi">
+    <svg viewBox="0 0 124 74" class="mark mark-sm" aria-hidden="true">
+      <g class="glyphs" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 52 L8 8"/>
+        <path d="M8 8 L26 8 Q36 8 36 19 Q36 30 26 30 L8 30"/>
+        <path d="M22 30 L36 52"/>
+        <path d="M46 52 L61 8 L76 52"/>
+        <path d="M88 52 L88 8"/>
+        <path d="M88 8 L104 8 Q116 8 116 30 Q116 52 104 52 L88 52"/>
+      </g>
+      <path class="spark" d="M6 66 L22 66 L31 60 L43 70 L55 63 L68 54 L82 66 L97 50 L118 57" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
 
-<!-- ==================== SIDEBAR ==================== -->
-<aside class="sidebar" id="sidebar">
-
-  <svg class="mark" id="mark" viewBox="0 0 124 74" role="img" aria-label="RAD">
-    <g class="glyphs" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M8 52 L8 8"/>
-      <path d="M8 8 L26 8 Q36 8 36 19 Q36 30 26 30 L8 30"/>
-      <path d="M22 30 L36 52"/>
-      <path d="M46 52 L61 8 L76 52"/>
-      <path d="M52 36 L70 36"/>
-      <path d="M88 52 L88 8"/>
-      <path d="M88 8 L104 8 Q116 8 116 30 Q116 52 104 52 L88 52"/>
-    </g>
-    <path class="spark" d="M6 66 L22 66 L31 60 L43 70 L55 63 L68 54 L82 66 L97 50 L118 57"
-          fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-
-  <h1 class="me-name">Raghad Alharbi</h1>
-  <p class="me-role" data-en="Data Analyst &amp; Data Engineer" data-ar="محلّلة بيانات ومهندسة بيانات">Data Analyst &amp; Data Engineer</p>
-
-  <nav class="nav" aria-label="Sections">
-    <a class="nav-link is-active" href="#about"><span data-en="Start" data-ar="البداية">Start</span></a>
-    <a class="nav-link" href="#experience"><span data-en="Experience" data-ar="الخبرة">Experience</span></a>
+  <nav class="rail-nav" id="railNav" aria-label="Sections">
+    <a class="nav-link" href="#work"><span data-en="Work" data-ar="الأعمال">Work</span></a>
     <a class="nav-link" href="#projects"><span data-en="Projects" data-ar="المشاريع">Projects</span></a>
     <a class="nav-link" href="#skills"><span data-en="Skills" data-ar="المهارات">Skills</span></a>
-    <a class="nav-link" href="#education"><span data-en="Education" data-ar="التعليم">Education</span></a>
     <a class="nav-link" href="#contact"><span data-en="Contact" data-ar="التواصل">Contact</span></a>
   </nav>
 
-  <div class="side-foot">
-
-    <div class="reach">
-      <a class="reach-btn" href="https://github.com/ragadsalharbi" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-      </a>
-      <a class="reach-btn" href="https://www.linkedin.com/in/raghad-alharbi-38a61b326/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.2 8.5h4.6V24H.2zM8.3 8.5h4.4v2.1h.06c.61-1.1 2.1-2.3 4.34-2.3 4.64 0 5.5 2.9 5.5 6.7V24h-4.6v-7.6c0-1.8-.03-4.2-2.5-4.2-2.5 0-2.9 1.9-2.9 4v7.8H8.3z"/></svg>
-      </a>
-      <a class="reach-btn" href="mailto:ragadsalharbi@gmail.com" aria-label="Email" title="Email">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4.5" width="20" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>
-      </a>
-      <a class="reach-btn" href="https://wa.me/966557820184" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A9.9 9.9 0 1 0 12 2zm0 18a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20zm4.5-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5 0a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2a.4.4 0 0 0 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
-      </a>
+  <div class="rail-end">
+    <div class="links">
+      <a class="lnk" href="https://github.com/ragadsalharbi" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg><em data-en="GitHub" data-ar="قتهب">GitHub</em></a>
+      <a class="lnk" href="https://www.linkedin.com/in/raghad-alharbi-38a61b326/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.2 8.5h4.6V24H.2zM8.3 8.5h4.4v2.1h.06c.61-1.1 2.1-2.3 4.34-2.3 4.64 0 5.5 2.9 5.5 6.7V24h-4.6v-7.6c0-1.8-.03-4.2-2.5-4.2-2.5 0-2.9 1.9-2.9 4v7.8H8.3z"/></svg><em data-en="LinkedIn" data-ar="لينكدإن">LinkedIn</em></a>
+      <a class="lnk" href="mailto:ragadsalharbi@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="2" y="4.5" width="20" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg><em data-en="Email" data-ar="البريد">Email</em></a>
+      <a class="lnk" href="https://wa.me/966557820184" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A9.9 9.9 0 1 0 12 2zm0 18a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20zm4.5-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5 0a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2a.4.4 0 0 0 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg><em data-en="WhatsApp" data-ar="واتساب">WhatsApp</em></a>
     </div>
 
-    <button class="btn btn-primary" id="saveContact" data-en="Save contact" data-ar="حفظ جهة الاتصال">Save contact</button>
-    <a class="btn" href="https://drive.google.com/file/d/11kZICcSPRaDs0uCANiD9xD4XydNGRMwh/view?usp=sharing" target="_blank" rel="noopener" data-en="Download CV" data-ar="تحميل السيرة">Download CV</a>
+    <button class="ctl" id="themeBtn" aria-label="Theme">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
 
-    <div class="prefs">
-      <button class="pref" id="themeBtn">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <span id="themeLabel">Light</span>
-      </button>
-      <div class="lang">
-        <button class="lang-btn is-active" data-lang="en">English</button>
-        <button class="lang-btn" data-lang="ar">عربي</button>
-      </div>
+    <button class="ctl ctl-txt" id="langBtn" aria-label="Language"><span id="langLabel">عربي</span></button>
+
+    <button class="ctl burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" hidden>
+  <a class="sheet-link" href="#work" data-en="Work" data-ar="الأعمال">Work</a>
+  <a class="sheet-link" href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
+  <a class="sheet-link" href="#skills" data-en="Skills" data-ar="المهارات">Skills</a>
+  <a class="sheet-link" href="#contact" data-en="Contact" data-ar="التواصل">Contact</a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="top">
+  <canvas class="flow" id="flow" aria-hidden="true"></canvas>
+
+  <div class="hero-in">
+    <svg viewBox="0 0 124 74" class="mark mark-lg" id="markBig" role="img" aria-label="RAD">
+      <g class="glyphs" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 52 L8 8"/>
+        <path d="M8 8 L26 8 Q36 8 36 19 Q36 30 26 30 L8 30"/>
+        <path d="M22 30 L36 52"/>
+        <path d="M46 52 L61 8 L76 52"/>
+        <path d="M88 52 L88 8"/>
+        <path d="M88 8 L104 8 Q116 8 116 30 Q116 52 104 52 L88 52"/>
+      </g>
+      <path class="spark" d="M6 66 L22 66 L31 60 L43 70 L55 63 L68 54 L82 66 L97 50 L118 57" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <p class="eyebrow"><i></i><span data-en="Raghad Alharbi · Riyadh · open to opportunities" data-ar="رغد الحربي · الرياض · متاحة للفرص">Raghad Alharbi · Riyadh · open to opportunities</span></p>
+
+    <h1 class="headline">
+      <span class="h-a" data-en="Messy data in." data-ar="بيانات فوضوية تدخل.">Messy data in.</span>
+      <span class="h-b" data-en="Answers out." data-ar="إجابات تخرج.">Answers out.</span>
+    </h1>
+
+    <p class="lede" data-en="I'm a data analyst and data engineer. Computer Science graduate from Umm Al-Qura, five months inside an enterprise data governance programme, and a habit of turning a mess of records into something a person can decide from." data-ar="أنا محلّلة بيانات ومهندسة بيانات. خريجة علوم حاسب من أم القرى، وخمسة أشهر داخل برنامج حوكمة بيانات مؤسسي، وعادة في تحويل ركام السجلات إلى شيء يُبنى عليه قرار.">I'm a data analyst and data engineer. Computer Science graduate from Umm Al-Qura, five months inside an enterprise data governance programme, and a habit of turning a mess of records into something a person can decide from.</p>
+
+    <div class="cta">
+      <a class="btn btn-solid" href="#projects" data-en="See the work" data-ar="شوفي الأعمال">See the work</a>
+      <a class="btn" href="https://drive.google.com/file/d/11kZICcSPRaDs0uCANiD9xD4XydNGRMwh/view?usp=sharing" target="_blank" rel="noopener" data-en="Download CV" data-ar="تحميل السيرة">Download CV</a>
+      <button class="btn" id="saveContact" data-en="Save contact" data-ar="حفظ جهة الاتصال">Save contact</button>
     </div>
   </div>
-</aside>
 
-<!-- ==================== MAIN ==================== -->
-<main class="main" id="main">
+  <a class="cue" href="#work" aria-hidden="true"><span></span></a>
+</section>
 
-  <!-- ---------- HERO ---------- -->
-  <section id="about" class="section hero">
+<main>
 
-    <p class="status"><i></i><span data-en="Open to opportunities" data-ar="متاحة للفرص">Open to opportunities</span></p>
+<!-- ==================== CONSOLE + EXPERIENCE ==================== -->
+<section class="section" id="work">
+  <p class="kicker" data-en="Ask me anything" data-ar="اسألني">Ask me anything</p>
+  <h2 class="h2" data-en="Four queries, one candidate" data-ar="أربعة استعلامات، مرشّحة واحدة">Four queries, one candidate</h2>
 
-    <h2 class="headline">
-      <span data-en="Messy data in." data-ar="بيانات فوضوية تدخل.">Messy data in.</span><br>
-      <span class="headline-b" data-en="Answers out." data-ar="إجابات تخرج.">Answers out.</span>
-    </h2>
+  <div class="console">
+    <div class="console-bar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="console-title">raghad@portfolio — psql 16.2</span>
+    </div>
 
-    <p class="lede" data-en="Computer Science graduate in Riyadh. I model data, clean it, move it, then make it say something useful — with SQL, Python and Power BI." data-ar="خريجة علوم حاسب في الرياض. أنمذج البيانات وأنظّفها وأنقلها، ثم أُخرج منها شيئاً مفيداً — بـ SQL و Python و Power BI.">Computer Science graduate in Riyadh. I model data, clean it, move it, then make it say something useful — with SQL, Python and Power BI.</p>
+    <div class="tabs" id="tabs">
+      <button class="tab is-active" data-en="profile" data-ar="الملف">profile</button>
+      <button class="tab" data-en="projects" data-ar="المشاريع">projects</button>
+      <button class="tab" data-en="skills" data-ar="المهارات">skills</button>
+      <button class="tab" data-en="contact" data-ar="التواصل">contact</button>
+    </div>
 
-    <!-- ---- interactive SQL console ---- -->
-    <div class="console">
-
-      <div class="console-bar">
-        <span class="dots"><i></i><i></i><i></i></span>
-        <span class="console-title">raghad@portfolio — psql 16.2</span>
-      </div>
-
-      <div class="tabs" id="tabs">
-        <button class="tab is-active" data-q="0" data-en="profile" data-ar="الملف">profile</button>
-        <button class="tab" data-q="1" data-en="projects" data-ar="المشاريع">projects</button>
-        <button class="tab" data-q="2" data-en="skills" data-ar="المهارات">skills</button>
-        <button class="tab" data-q="3" data-en="contact" data-ar="التواصل">contact</button>
-      </div>
-
-      <div class="console-body" dir="ltr">
-        <pre class="sql"><span class="ps1">portfolio=#</span> <code id="sql"></code><span class="caret" id="caret"></span></pre>
-        <div class="result" id="result" hidden>
-          <div class="table-wrap">
-            <table class="rows"><thead id="thead"></thead><tbody id="tbody"></tbody></table>
-          </div>
-          <p class="meta" id="meta"></p>
-        </div>
-      </div>
-
-      <div class="console-foot">
-        <span class="hint" data-en="Switch tabs to run a different query." data-ar="بدّلي التبويب لتشغيل استعلام آخر.">Switch tabs to run a different query.</span>
-        <button class="rerun" id="rerun" data-en="Run" data-ar="تشغيل">Run</button>
+    <div class="console-body" dir="ltr">
+      <pre class="sql"><span class="ps1">portfolio=#</span> <code id="sql"></code><span class="caret" id="caret"></span></pre>
+      <div class="result" id="result" hidden>
+        <div class="table-wrap"><table class="rows"><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+        <p class="meta" id="meta"></p>
       </div>
     </div>
 
-  </section>
-
-  <!-- ---------- EXPERIENCE ---------- -->
-  <section id="experience" class="section">
-    <h3 class="h3" data-en="Experience" data-ar="الخبرة">Experience</h3>
-
-    <article class="block">
-      <div class="block-head">
-        <div>
-          <h4 data-en="Data Governance Intern — Co-op" data-ar="متدربة حوكمة بيانات — تعاوني">Data Governance Intern — Co-op</h4>
-          <p class="org">Master Works · Riyadh</p>
-        </div>
-        <span class="when">03/2025 – 07/2025</span>
-      </div>
-      <ul class="bullets">
-        <li data-en="Built and maintained the centralised metadata layer for an enterprise data programme — a data catalog and business glossary in Informatica CDGC spanning multiple ERP and operational source systems." data-ar="بنيت وصنت طبقة البيانات الوصفية المركزية لبرنامج بيانات مؤسسي — كتالوج بيانات وقاموس أعمال في Informatica CDGC يغطي عدة أنظمة ERP وتشغيلية.">Built and maintained the centralised metadata layer for an enterprise data programme — a data catalog and business glossary in Informatica CDGC spanning multiple ERP and operational source systems.</li>
-        <li data-en="Ran automated metadata scans to profile and classify data assets, mapping sensitive and personally identifiable fields to support privacy controls and ownership assignment." data-ar="نفّذت فحوصات آلية للبيانات الوصفية لتوصيف وتصنيف أصول البيانات، مع ربط الحقول الحساسة والشخصية لدعم ضوابط الخصوصية وإسناد الملكية.">Ran automated metadata scans to profile and classify data assets, mapping sensitive and personally identifiable fields to support privacy controls and ownership assignment.</li>
-        <li data-en="Defined and monitored data quality rules across governed datasets, and built Power BI dashboards tracking rule coverage, classification progress and delivery against programme targets." data-ar="عرّفت وتابعت قواعد جودة البيانات عبر مجموعات البيانات المحكومة، وبنيت لوحات Power BI لتتبع تغطية القواعد وتقدّم التصنيف والتسليم مقابل أهداف البرنامج.">Defined and monitored data quality rules across governed datasets, and built Power BI dashboards tracking rule coverage, classification progress and delivery against programme targets.</li>
-      </ul>
-      <p class="tech">Informatica CDGC · SQL · Python · Power BI · ETL · Data Warehousing</p>
-    </article>
-  </section>
-
-  <!-- ---------- PROJECTS ---------- -->
-  <section id="projects" class="section">
-    <h3 class="h3" data-en="Projects" data-ar="المشاريع">Projects</h3>
-    <p class="note" data-en="Every card opens its repository on GitHub." data-ar="كل بطاقة تفتح مستودعها على قتهب.">Every card opens its repository on GitHub.</p>
-
-    <div class="filters">
-      <button class="filter is-active" data-filter="all" data-en="All" data-ar="الكل">All</button>
-      <button class="filter" data-filter="data" data-en="Data &amp; ML" data-ar="بيانات وتعلّم آلة">Data &amp; ML</button>
-      <button class="filter" data-filter="eng" data-en="Engineering" data-ar="هندسة">Engineering</button>
-      <button class="filter" data-filter="net" data-en="Networks" data-ar="شبكات">Networks</button>
+    <div class="console-foot">
+      <span class="hint" data-en="Switch tabs to run a different query." data-ar="بدّلي التبويب لتشغيل استعلام آخر.">Switch tabs to run a different query.</span>
+      <button class="rerun" id="rerun" data-en="Run" data-ar="تشغيل">Run</button>
     </div>
+  </div>
 
-    <div class="grid">
-
-      <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/sentiment-classification-huggingface" target="_blank" rel="noopener">
-        <span class="dot" style="--dot:#3572A5"></span>
-        <h4>Sentiment Classification</h4>
-        <p class="repo">sentiment-classification-huggingface</p>
-        <p class="desc" data-en="Benchmarked DistilBERT, RoBERTa and BERT on a token-normalised IMDb subset, unifying three different label formats into one binary scale. DistilBERT led at 90% accuracy and 88.6% F1, deployed in a Streamlit demo." data-ar="قارنت DistilBERT و RoBERTa و BERT على عينة IMDb موحّدة الطول، ووحّدت ثلاث صيغ تصنيف مختلفة في مقياس ثنائي واحد. تصدّر DistilBERT بدقة ٩٠٪ و F1 ٨٨٫٦٪، ونُشر في تطبيق Streamlit.">Benchmarked DistilBERT, RoBERTa and BERT on a token-normalised IMDb subset, unifying three different label formats into one binary scale. DistilBERT led at 90% accuracy and 88.6% F1, deployed in a Streamlit demo.</p>
-        <p class="tags">Python · Hugging Face · scikit-learn · Streamlit</p>
-      </a>
-
-      <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/spam-detection-machine-learning" target="_blank" rel="noopener">
-        <span class="dot" style="--dot:#3572A5"></span>
-        <h4>SMS Spam Detection</h4>
-        <p class="repo">spam-detection-machine-learning</p>
-        <p class="desc" data-en="Text classification pipeline from preprocessing through model comparison, benchmarking Naive Bayes against SVM and selecting on precision — the metric that matters when a false positive hides a real message. 97% accuracy, 98% precision." data-ar="مسار تصنيف نصوص من المعالجة الأولية حتى مقارنة النماذج، بين Naive Bayes و SVM، والاختيار على أساس الـ precision — المقياس الأهم حين يخفي الإيجاب الكاذب رسالة حقيقية. دقة ٩٧٪ و precision ٩٨٪.">Text classification pipeline from preprocessing through model comparison, benchmarking Naive Bayes against SVM and selecting on precision — the metric that matters when a false positive hides a real message. 97% accuracy, 98% precision.</p>
-        <p class="tags">Python · scikit-learn · NLTK · Streamlit</p>
-      </a>
-
-      <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/video-game-sales-prediction" target="_blank" rel="noopener">
-        <span class="dot" style="--dot:#3572A5"></span>
-        <h4>Video Game Sales Analysis</h4>
-        <p class="repo">video-game-sales-prediction</p>
-        <p class="desc" data-en="End-to-end analysis pipeline — cleaning, handling missing and inconsistent records, exploring sales across genre, platform and publisher, then a regression model evaluated on MSE and R². Findings delivered as an interactive dashboard." data-ar="مسار تحليل متكامل — تنظيف ومعالجة السجلات الناقصة وغير المتسقة، واستكشاف المبيعات حسب النوع والمنصة والناشر، ثم نموذج انحدار مُقيَّم بـ MSE و R². وعُرضت النتائج في لوحة تفاعلية.">End-to-end analysis pipeline — cleaning, handling missing and inconsistent records, exploring sales across genre, platform and publisher, then a regression model evaluated on MSE and R². Findings delivered as an interactive dashboard.</p>
-        <p class="tags">Python · Pandas · scikit-learn · Plotly · Streamlit</p>
-      </a>
-
-      <a class="card" data-cat="eng" href="https://github.com/ragadsalharbi/hospital-database-management-system" target="_blank" rel="noopener">
-        <span class="dot" style="--dot:#e38c00"></span>
-        <h4>Hospital Database System</h4>
-        <p class="repo">hospital-database-management-system</p>
-        <p class="desc" data-en="Modelled and normalised a relational MySQL schema for hospital operations, with a full ERD and enforced key constraints. Analytical SQL using multi-table joins and aggregations to report on patient volume, appointment load and departmental activity." data-ar="نمذجت وطبّعت مخططاً علائقياً في MySQL لعمليات المستشفى، مع ERD كامل وقيود مفاتيح مُطبَّقة. واستعلامات تحليلية بربط جداول متعددة وتجميعات لتقارير حجم المرضى والمواعيد ونشاط الأقسام.">Modelled and normalised a relational MySQL schema for hospital operations, with a full ERD and enforced key constraints. Analytical SQL using multi-table joins and aggregations to report on patient volume, appointment load and departmental activity.</p>
-        <p class="tags">MySQL · SQL · Data Modelling · ERD</p>
-      </a>
-
-      <a class="card wide" data-cat="eng" href="https://github.com/ragadsalharbi/UBAR" target="_blank" rel="noopener">
-        <span class="dot" style="--dot:#f1e05a"></span>
-        <span class="badge" data-en="Graduation project" data-ar="مشروع التخرج">Graduation project</span>
-        <h4>Übār</h4>
-        <p class="repo">UBAR</p>
-        <p class="desc" data-en="Designed the Firebase Realtime Database structure for concurrent game sessions, engineering concurrency-safe room state, presence tracking and automatic host re-election on disconnect. Ran usability testing with 54 participants and analysed the results using the System Usability Scale." data-ar="صمّمت بنية Firebase Realtime Database لجلسات اللعب المتزامنة، وهندست حالة غرف آمنة للتزامن وتتبّع الحضور وإعادة انتخاب المضيف تلقائياً عند الانقطاع. ونفّذت اختبار قابلية استخدام مع ٥٤ مشاركاً وحلّلت النتائج بمقياس SUS.">Designed the Firebase Realtime Database structure for concurrent game sessions, engineering concurrency-safe room state, presence tracking and automatic host re-election on disconnect. Ran usability testing with 54 participants and analysed the results using the System Usability Scale.</p>
-        <p class="tags">JavaScript (ES Modules) · Firebase Realtime Database · Node.js</p>
-      </a>
-
-      <a class="card" data-cat="net" href="https://github.com/ragadsalharbi/aljamoum-campus-network" target="_blank" rel="noopener">
-        <span class="dot" style="--dot:#6EE7C8"></span>
-        <h4>Aljamoum Campus Network</h4>
-        <p class="repo">aljamoum-campus-network</p>
-        <p class="desc" data-en="Three-building campus network in Packet Tracer with per-building DHCP pools and static routing over a triangle topology. My part: connectivity validation across every building pair, and the equipment inventory and cost estimate." data-ar="شبكة جامعية بثلاثة مبانٍ في Packet Tracer مع مجمّعات DHCP لكل مبنى وتوجيه ثابت عبر طوبولوجيا مثلثة. دوري: التحقق من الاتصال بين كل زوج مبانٍ، وحصر المعدات وتقدير التكلفة.">Three-building campus network in Packet Tracer with per-building DHCP pools and static routing over a triangle topology. My part: connectivity validation across every building pair, and the equipment inventory and cost estimate.</p>
-        <p class="tags">Cisco IOS · Packet Tracer · DHCP · Static routing · Subnetting</p>
-      </a>
-
-      <a class="card" data-cat="eng" href="https://github.com/ragadsalharbi/SmartSaver" target="_blank" rel="noopener">
-        <span class="dot" style="--dot:#8993be"></span>
-        <span class="badge quiet" data-en="Team project · forked" data-ar="مشروع جماعي · متفرّع">Team project · forked</span>
-        <h4>SmartSaver</h4>
-        <p class="repo">SmartSaver</p>
-        <p class="desc" data-en="Personal finance tracker. I built the back end: the relational model for users, salaries and expenses, authentication, and the calculation layer for savings allocation, category totals and remaining surplus." data-ar="متتبّع مالي شخصي. بنيت الواجهة الخلفية: النموذج العلائقي للمستخدمين والرواتب والمصروفات، والمصادقة، وطبقة الحسابات لتخصيص الادخار وإجماليات الفئات والفائض المتبقي.">Personal finance tracker. I built the back end: the relational model for users, salaries and expenses, authentication, and the calculation layer for savings allocation, category totals and remaining surplus.</p>
-        <p class="tags">PHP · MySQL · JavaScript</p>
-      </a>
-
+  <article class="block">
+    <div class="block-head">
+      <div>
+        <h3 data-en="Data Governance Intern — Co-op" data-ar="متدربة حوكمة بيانات — تعاوني">Data Governance Intern — Co-op</h3>
+        <p class="org">Master Works · Riyadh</p>
+      </div>
+      <span class="when">03/2025 – 07/2025</span>
     </div>
-  </section>
+    <ul class="bullets">
+      <li data-en="Built and maintained the centralised metadata layer for an enterprise data programme — a data catalog and business glossary in Informatica CDGC spanning multiple ERP and operational source systems." data-ar="بنيت وصنت طبقة البيانات الوصفية المركزية لبرنامج بيانات مؤسسي — كتالوج بيانات وقاموس أعمال في Informatica CDGC يغطي عدة أنظمة ERP وتشغيلية.">Built and maintained the centralised metadata layer for an enterprise data programme — a data catalog and business glossary in Informatica CDGC spanning multiple ERP and operational source systems.</li>
+      <li data-en="Ran automated metadata scans to profile and classify data assets, mapping sensitive and personally identifiable fields to support privacy controls and ownership assignment." data-ar="نفّذت فحوصات آلية للبيانات الوصفية لتوصيف وتصنيف أصول البيانات، مع ربط الحقول الحساسة والشخصية لدعم ضوابط الخصوصية وإسناد الملكية.">Ran automated metadata scans to profile and classify data assets, mapping sensitive and personally identifiable fields to support privacy controls and ownership assignment.</li>
+      <li data-en="Defined and monitored data quality rules across governed datasets, and built Power BI dashboards tracking rule coverage, classification progress and delivery against programme targets." data-ar="عرّفت وتابعت قواعد جودة البيانات عبر مجموعات البيانات المحكومة، وبنيت لوحات Power BI لتتبع تغطية القواعد وتقدّم التصنيف والتسليم مقابل أهداف البرنامج.">Defined and monitored data quality rules across governed datasets, and built Power BI dashboards tracking rule coverage, classification progress and delivery against programme targets.</li>
+    </ul>
+    <p class="tech">Informatica CDGC · SQL · Python · Power BI · ETL · Data Warehousing</p>
+  </article>
 
-  <!-- ---------- SKILLS ---------- -->
-  <section id="skills" class="section">
-    <h3 class="h3" data-en="Skills" data-ar="المهارات">Skills</h3>
-
-    <div class="skills">
-      <div class="skill">
-        <h4 data-en="Data engineering &amp; databases" data-ar="هندسة البيانات وقواعد البيانات">Data engineering &amp; databases</h4>
-        <p>SQL · MySQL · Data Modelling · ETL · Data Warehousing · Firebase Realtime Database</p>
+  <article class="block">
+    <div class="block-head">
+      <div>
+        <h3 data-en="BSc Computer Science" data-ar="بكالوريوس علوم الحاسب">BSc Computer Science</h3>
+        <p class="org" data-en="Umm Al-Qura University · Makkah" data-ar="جامعة أم القرى · مكة المكرمة">Umm Al-Qura University · Makkah</p>
       </div>
-      <div class="skill">
-        <h4 data-en="Analysis &amp; BI" data-ar="التحليل وذكاء الأعمال">Analysis &amp; BI</h4>
-        <p>Pandas · NumPy · scikit-learn · Power BI · Plotly · Streamlit · Data Profiling</p>
-      </div>
-      <div class="skill">
-        <h4 data-en="Data governance" data-ar="حوكمة البيانات">Data governance</h4>
-        <p>Informatica CDGC · Data Catalog · Business Glossary · Metadata Management · Data Classification · Data Quality</p>
-      </div>
-      <div class="skill">
-        <h4 data-en="Programming &amp; tools" data-ar="البرمجة والأدوات">Programming &amp; tools</h4>
-        <p>Python · SQL · JavaScript · PHP · Git · GitHub · Agile/Scrum</p>
-      </div>
-      <div class="skill quiet">
-        <h4 data-en="Coursework exposure" data-ar="مواد دراسية">Coursework exposure</h4>
-        <p>Apache Spark · PySpark · Big Data Concepts · Cloud Computing (Azure IaaS) · Cisco Networking</p>
-      </div>
+      <span class="when">09/2022 – 06/2026</span>
     </div>
-  </section>
+    <p class="tech" data-en="Databases · Software engineering · Networks · Compilers · System analysis · Machine learning · NLP · Cloud computing" data-ar="قواعد البيانات · هندسة البرمجيات · الشبكات · المترجمات · تحليل النظم · تعلّم الآلة · معالجة اللغة · الحوسبة السحابية">Databases · Software engineering · Networks · Compilers · System analysis · Machine learning · NLP · Cloud computing</p>
+  </article>
+</section>
 
-  <!-- ---------- EDUCATION ---------- -->
-  <section id="education" class="section">
-    <h3 class="h3" data-en="Education" data-ar="التعليم">Education</h3>
-    <article class="block">
-      <div class="block-head">
-        <div>
-          <h4 data-en="BSc Computer Science" data-ar="بكالوريوس علوم الحاسب">BSc Computer Science</h4>
-          <p class="org" data-en="Umm Al-Qura University · Makkah" data-ar="جامعة أم القرى · مكة المكرمة">Umm Al-Qura University · Makkah</p>
-        </div>
-        <span class="when">09/2022 – 06/2026</span>
-      </div>
-      <p class="tech" data-en="Databases · Software engineering · Networks · Compilers · System analysis · Machine learning · NLP · Cloud computing" data-ar="قواعد البيانات · هندسة البرمجيات · الشبكات · المترجمات · تحليل النظم · تعلّم الآلة · معالجة اللغة · الحوسبة السحابية">Databases · Software engineering · Networks · Compilers · System analysis · Machine learning · NLP · Cloud computing</p>
-    </article>
-  </section>
+<!-- ==================== PROJECTS ==================== -->
+<section class="section" id="projects">
+  <p class="kicker" data-en="Seven repositories" data-ar="سبعة مستودعات">Seven repositories</p>
+  <h2 class="h2" data-en="Projects" data-ar="المشاريع">Projects</h2>
+  <p class="note" data-en="Every card opens its repository on GitHub." data-ar="كل بطاقة تفتح مستودعها على قتهب.">Every card opens its repository on GitHub.</p>
 
-  <!-- ---------- CONTACT ---------- -->
-  <section id="contact" class="section">
-    <h3 class="h3" data-en="Contact" data-ar="التواصل">Contact</h3>
-    <p class="lede small" data-en="Open to data analyst and data engineer roles in Riyadh. Email is the fastest way to reach me." data-ar="متاحة لوظائف تحليل وهندسة البيانات في الرياض. البريد الإلكتروني أسرع طريقة للتواصل.">Open to data analyst and data engineer roles in Riyadh. Email is the fastest way to reach me.</p>
+  <div class="filters">
+    <button class="filter is-active" data-filter="all" data-en="All" data-ar="الكل">All</button>
+    <button class="filter" data-filter="data" data-en="Data &amp; ML" data-ar="بيانات وتعلّم آلة">Data &amp; ML</button>
+    <button class="filter" data-filter="eng" data-en="Engineering" data-ar="هندسة">Engineering</button>
+    <button class="filter" data-filter="net" data-en="Networks" data-ar="شبكات">Networks</button>
+  </div>
 
-    <div class="contacts">
-      <a class="contact" href="mailto:ragadsalharbi@gmail.com"><span data-en="Email" data-ar="البريد">Email</span><b>ragadsalharbi@gmail.com</b></a>
-      <a class="contact" href="https://wa.me/966557820184" target="_blank" rel="noopener"><span>WhatsApp</span><b dir="ltr">+966 55 782 0184</b></a>
-      <a class="contact" href="https://github.com/ragadsalharbi" target="_blank" rel="noopener"><span>GitHub</span><b>ragadsalharbi</b></a>
-      <a class="contact" href="https://www.linkedin.com/in/raghad-alharbi-38a61b326/" target="_blank" rel="noopener"><span>LinkedIn</span><b>Raghad Alharbi</b></a>
+  <div class="grid">
+
+    <a class="card wide" data-cat="eng" href="https://github.com/ragadsalharbi/UBAR" target="_blank" rel="noopener">
+      <span class="dot" style="--dot:#f1e05a"></span>
+      <span class="badge" data-en="Graduation project" data-ar="مشروع التخرج">Graduation project</span>
+      <h3>Übār</h3>
+      <p class="repo">UBAR</p>
+      <p class="desc" data-en="Designed the Firebase Realtime Database structure for concurrent game sessions, engineering concurrency-safe room state, presence tracking and automatic host re-election on disconnect. Ran usability testing with 54 participants and analysed the results using the System Usability Scale." data-ar="صمّمت بنية Firebase Realtime Database لجلسات اللعب المتزامنة، وهندست حالة غرف آمنة للتزامن وتتبّع الحضور وإعادة انتخاب المضيف تلقائياً عند الانقطاع. ونفّذت اختبار قابلية استخدام مع ٥٤ مشاركاً وحلّلت النتائج بمقياس SUS.">Designed the Firebase Realtime Database structure for concurrent game sessions, engineering concurrency-safe room state, presence tracking and automatic host re-election on disconnect. Ran usability testing with 54 participants and analysed the results using the System Usability Scale.</p>
+      <p class="tags">JavaScript (ES Modules) · Firebase Realtime Database · Node.js</p>
+    </a>
+
+    <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/sentiment-classification-huggingface" target="_blank" rel="noopener">
+      <span class="dot" style="--dot:#3572A5"></span>
+      <h3>Sentiment Classification</h3>
+      <p class="repo">sentiment-classification-huggingface</p>
+      <p class="desc" data-en="Benchmarked DistilBERT, RoBERTa and BERT on a token-normalised IMDb subset, unifying three different label formats into one binary scale. DistilBERT led at 90% accuracy and 88.6% F1, deployed in a Streamlit demo." data-ar="قارنت DistilBERT و RoBERTa و BERT على عينة IMDb موحّدة الطول، ووحّدت ثلاث صيغ تصنيف مختلفة في مقياس ثنائي واحد. تصدّر DistilBERT بدقة ٩٠٪ و F1 ٨٨٫٦٪، ونُشر في تطبيق Streamlit.">Benchmarked DistilBERT, RoBERTa and BERT on a token-normalised IMDb subset, unifying three different label formats into one binary scale. DistilBERT led at 90% accuracy and 88.6% F1, deployed in a Streamlit demo.</p>
+      <p class="tags">Python · Hugging Face · scikit-learn · Streamlit</p>
+    </a>
+
+    <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/spam-detection-machine-learning" target="_blank" rel="noopener">
+      <span class="dot" style="--dot:#3572A5"></span>
+      <h3>SMS Spam Detection</h3>
+      <p class="repo">spam-detection-machine-learning</p>
+      <p class="desc" data-en="Text classification pipeline from preprocessing through model comparison, benchmarking Naive Bayes against SVM and selecting on precision — the metric that matters when a false positive hides a real message. 97% accuracy, 98% precision." data-ar="مسار تصنيف نصوص من المعالجة الأولية حتى مقارنة النماذج، بين Naive Bayes و SVM، والاختيار على أساس الـ precision — المقياس الأهم حين يخفي الإيجاب الكاذب رسالة حقيقية. دقة ٩٧٪ و precision ٩٨٪.">Text classification pipeline from preprocessing through model comparison, benchmarking Naive Bayes against SVM and selecting on precision — the metric that matters when a false positive hides a real message. 97% accuracy, 98% precision.</p>
+      <p class="tags">Python · scikit-learn · NLTK · Streamlit</p>
+    </a>
+
+    <a class="card" data-cat="data" href="https://github.com/ragadsalharbi/video-game-sales-prediction" target="_blank" rel="noopener">
+      <span class="dot" style="--dot:#3572A5"></span>
+      <h3>Video Game Sales Analysis</h3>
+      <p class="repo">video-game-sales-prediction</p>
+      <p class="desc" data-en="End-to-end analysis pipeline — cleaning, handling missing and inconsistent records, exploring sales across genre, platform and publisher, then a regression model evaluated on MSE and R². Findings delivered as an interactive dashboard." data-ar="مسار تحليل متكامل — تنظيف ومعالجة السجلات الناقصة وغير المتسقة، واستكشاف المبيعات حسب النوع والمنصة والناشر، ثم نموذج انحدار مُقيَّم بـ MSE و R². وعُرضت النتائج في لوحة تفاعلية.">End-to-end analysis pipeline — cleaning, handling missing and inconsistent records, exploring sales across genre, platform and publisher, then a regression model evaluated on MSE and R². Findings delivered as an interactive dashboard.</p>
+      <p class="tags">Python · Pandas · scikit-learn · Plotly · Streamlit</p>
+    </a>
+
+    <a class="card" data-cat="eng" href="https://github.com/ragadsalharbi/hospital-database-management-system" target="_blank" rel="noopener">
+      <span class="dot" style="--dot:#e38c00"></span>
+      <h3>Hospital Database System</h3>
+      <p class="repo">hospital-database-management-system</p>
+      <p class="desc" data-en="Modelled and normalised a relational MySQL schema for hospital operations, with a full ERD and enforced key constraints. Analytical SQL using multi-table joins and aggregations to report on patient volume, appointment load and departmental activity." data-ar="نمذجت وطبّعت مخططاً علائقياً في MySQL لعمليات المستشفى، مع ERD كامل وقيود مفاتيح مُطبَّقة. واستعلامات تحليلية بربط جداول متعددة وتجميعات لتقارير حجم المرضى والمواعيد ونشاط الأقسام.">Modelled and normalised a relational MySQL schema for hospital operations, with a full ERD and enforced key constraints. Analytical SQL using multi-table joins and aggregations to report on patient volume, appointment load and departmental activity.</p>
+      <p class="tags">MySQL · SQL · Data Modelling · ERD</p>
+    </a>
+
+    <a class="card" data-cat="net" href="https://github.com/ragadsalharbi/aljamoum-campus-network" target="_blank" rel="noopener">
+      <span class="dot" style="--dot:#2DD4BF"></span>
+      <h3>Aljamoum Campus Network</h3>
+      <p class="repo">aljamoum-campus-network</p>
+      <p class="desc" data-en="Three-building campus network in Packet Tracer with per-building DHCP pools and static routing over a triangle topology. My part: connectivity validation across every building pair, and the equipment inventory and cost estimate." data-ar="شبكة جامعية بثلاثة مبانٍ في Packet Tracer مع مجمّعات DHCP لكل مبنى وتوجيه ثابت عبر طوبولوجيا مثلثة. دوري: التحقق من الاتصال بين كل زوج مبانٍ، وحصر المعدات وتقدير التكلفة.">Three-building campus network in Packet Tracer with per-building DHCP pools and static routing over a triangle topology. My part: connectivity validation across every building pair, and the equipment inventory and cost estimate.</p>
+      <p class="tags">Cisco IOS · Packet Tracer · DHCP · Static routing · Subnetting</p>
+    </a>
+
+    <a class="card" data-cat="eng" href="https://github.com/ragadsalharbi/SmartSaver" target="_blank" rel="noopener">
+      <span class="dot" style="--dot:#8993be"></span>
+      <span class="badge quiet" data-en="Team project · forked" data-ar="مشروع جماعي · متفرّع">Team project · forked</span>
+      <h3>SmartSaver</h3>
+      <p class="repo">SmartSaver</p>
+      <p class="desc" data-en="Personal finance tracker. I built the back end: the relational model for users, salaries and expenses, authentication, and the calculation layer for savings allocation, category totals and remaining surplus." data-ar="متتبّع مالي شخصي. بنيت الواجهة الخلفية: النموذج العلائقي للمستخدمين والرواتب والمصروفات، والمصادقة، وطبقة الحسابات لتخصيص الادخار وإجماليات الفئات والفائض المتبقي.">Personal finance tracker. I built the back end: the relational model for users, salaries and expenses, authentication, and the calculation layer for savings allocation, category totals and remaining surplus.</p>
+      <p class="tags">PHP · MySQL · JavaScript</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- ==================== SKILLS ==================== -->
+<section class="section" id="skills">
+  <p class="kicker" data-en="What I work with" data-ar="أدواتي">What I work with</p>
+  <h2 class="h2" data-en="Skills" data-ar="المهارات">Skills</h2>
+
+  <div class="skills">
+    <div class="skill">
+      <h3 data-en="Data engineering &amp; databases" data-ar="هندسة البيانات وقواعد البيانات">Data engineering &amp; databases</h3>
+      <p>SQL · MySQL · Data Modelling · ETL · Data Warehousing · Firebase Realtime Database</p>
     </div>
+    <div class="skill">
+      <h3 data-en="Analysis &amp; BI" data-ar="التحليل وذكاء الأعمال">Analysis &amp; BI</h3>
+      <p>Pandas · NumPy · scikit-learn · Power BI · Plotly · Streamlit · Data Profiling</p>
+    </div>
+    <div class="skill">
+      <h3 data-en="Data governance" data-ar="حوكمة البيانات">Data governance</h3>
+      <p>Informatica CDGC · Data Catalog · Business Glossary · Metadata Management · Data Classification · Data Quality</p>
+    </div>
+    <div class="skill">
+      <h3 data-en="Programming &amp; tools" data-ar="البرمجة والأدوات">Programming &amp; tools</h3>
+      <p>Python · SQL · JavaScript · PHP · Git · GitHub · Agile/Scrum</p>
+    </div>
+    <div class="skill quiet">
+      <h3 data-en="Coursework exposure" data-ar="مواد دراسية">Coursework exposure</h3>
+      <p>Apache Spark · PySpark · Big Data Concepts · Cloud Computing (Azure IaaS) · Cisco Networking</p>
+    </div>
+  </div>
+</section>
 
-    <footer class="foot">
-      <span>© <span id="year">2026</span> Raghad Sultan Alharbi</span>
-      <span data-en="Built from scratch — HTML, CSS, JavaScript" data-ar="مبني من الصفر — HTML و CSS و JavaScript">Built from scratch — HTML, CSS, JavaScript</span>
-    </footer>
-  </section>
+<!-- ==================== CONTACT ==================== -->
+<section class="section" id="contact">
+  <p class="kicker" data-en="Say hello" data-ar="تواصلي معي">Say hello</p>
+  <h2 class="h2" data-en="Contact" data-ar="التواصل">Contact</h2>
+  <p class="note" data-en="Open to data analyst and data engineer roles in Riyadh. Email is the fastest way to reach me." data-ar="متاحة لوظائف تحليل وهندسة البيانات في الرياض. البريد الإلكتروني أسرع طريقة للتواصل.">Open to data analyst and data engineer roles in Riyadh. Email is the fastest way to reach me.</p>
+
+  <div class="contacts">
+    <a class="contact" href="mailto:ragadsalharbi@gmail.com"><span data-en="Email" data-ar="البريد">Email</span><b>ragadsalharbi@gmail.com</b></a>
+    <a class="contact" href="https://wa.me/966557820184" target="_blank" rel="noopener"><span>WhatsApp</span><b dir="ltr">+966 55 782 0184</b></a>
+    <a class="contact" href="https://github.com/ragadsalharbi" target="_blank" rel="noopener"><span>GitHub</span><b>ragadsalharbi</b></a>
+    <a class="contact" href="https://www.linkedin.com/in/raghad-alharbi-38a61b326/" target="_blank" rel="noopener"><span>LinkedIn</span><b>Raghad Alharbi</b></a>
+  </div>
+
+  <footer class="foot">
+    <span>© <span id="year">2026</span> Raghad Sultan Alharbi</span>
+    <span data-en="Built from scratch — HTML, CSS, JavaScript" data-ar="مبني من الصفر — HTML و CSS و JavaScript">Built from scratch — HTML, CSS, JavaScript</span>
+  </footer>
+</section>
 
 </main>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
 <script src="script.js"></script>
 </body>
 </html>
