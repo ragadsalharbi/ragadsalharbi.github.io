@@ -5,7 +5,7 @@
    ============================================================ */
 
 const ME = {
-  firstName: 'Raghad', lastName: 'Alharbi', fullName: 'Raghad Sultan Alharbi',
+  firstName: 'Raghad', lastName: 'Alharbi', fullName: 'Raghad Alharbi',
   title: 'Data Analyst & Data Engineer',
   phone: '+966557820184', email: 'ragadsalharbi@gmail.com',
   website: 'https://ragadsalharbi.github.io',
